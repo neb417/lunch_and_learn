@@ -17,6 +17,7 @@ require 'simplecov'
 SimpleCov.start 'rails'
 SimpleCov.add_filter ['config','channels', 'jobs', 'mailers']
 require 'webmock/rspec'
+require 'vcr'
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
@@ -95,24 +96,4 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
-  config.include FactoryBot::Syntax::Methods
-end
-
-VCR.configure do |config|
-  config.before_record do |i|
-    i.response.body.force_encoding('UTF-8')
-  end
-  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  config.hook_into :webmock
-  config.filter_sensitive_data('<API Key>') { ENV['name_api_key'] } #name_api_key from config/application.yml
-  config.configure_rspec_metadata!
-  config.default_cassette_options = { re_record_interval: 30.days }
-  config.allow_http_connections_when_no_cassette = true
-end
-
-Shoulda::Matchers.configure do |config|
-  config.integrate do |with|
-    with.test_framework :rspec
-    with.library :rails
-  end
 end
