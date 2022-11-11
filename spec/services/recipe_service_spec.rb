@@ -10,6 +10,7 @@ RSpec.describe RecipeService do
     expect(recipes[:count]).to be_an Integer
     expect(recipes).to have_key(:hits)
     expect(recipes[:hits]).to be_an Array
+    expect(recipes[:hits].count).to be <= 20
 
     recipe = recipes[:hits].first
 

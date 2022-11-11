@@ -8,6 +8,7 @@ class RecipeService
     Faraday.new('https://api.edamam.com') do |faraday|
       faraday.params['app_id'] = ENV['recipe_app_id']
       faraday.params['app_key'] = ENV['recipe_api_key']
+      faraday.params['random'] = 'true'
     end
   end
 
