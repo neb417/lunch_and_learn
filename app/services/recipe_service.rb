@@ -1,6 +1,8 @@
 class RecipeService
   def self.call_for_recipes(country)
-    response = conn.get("/api/recipes/v2?type=public&q=#{country}")
+    response = conn.get('/api/recipes/v2?type=public') do |req|
+      req.params['q'] = country
+    end
     parse(response)
   end
 

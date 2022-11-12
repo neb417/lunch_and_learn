@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe RecipeService do
-  it 'returns recipes' do
+  it 'returns recipes', :vcr do
     recipes = RecipeService.call_for_recipes('Malawi')
 
     expect(recipes).to be_a Hash
