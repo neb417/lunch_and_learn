@@ -7,7 +7,7 @@ RSpec.describe 'Learning Resources end point' do
       get api_v1_learning_resources_path(country)
     end
 
-    it 'uses passed country to find media' do
+    it 'uses passed country to find media', :vcr do
       media = JSON.parse(response.body, symbolize_names: true)
       expect(response).to be_successful
       expect(response.status).to eq(200)
