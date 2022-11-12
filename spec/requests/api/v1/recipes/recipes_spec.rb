@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'recipe end point' do
   describe 'recipe call with no country param', :vcr do
+    before :each do
+      allow(CountryFacade).to receive(:select_country)
+        .and_return('Andora')
+    end
 
     it 'uses fetched country to return recipes' do
       get api_v1_recipes_path
