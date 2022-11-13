@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.edamam.com/api/recipes/v2?app_id=3dd5fb33&app_key=<app_key>&q=etwouic&random=true&type=public
+    uri: https://api.edamam.com/api/recipes/v2?app_id=3dd5fb33&app_key=<recipe_app_key>&q=etwouic&random=true&type=public
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Sat, 12 Nov 2022 00:30:23 GMT
+      - Sun, 13 Nov 2022 16:22:44 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -37,9 +37,9 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=15552001
       X-Request-Id:
-      - 3a0b3e9f1c05ba75965a0a2dd786532b
+      - 51d611c7b6e43a115408e3dd06be96c7
     body:
       encoding: UTF-8
       string: '{"from":1,"to":0,"count":0,"_links":{},"hits":[]}'
-  recorded_at: Sat, 12 Nov 2022 00:30:23 GMT
+  recorded_at: Sun, 13 Nov 2022 16:22:44 GMT
 recorded_with: VCR 6.1.0

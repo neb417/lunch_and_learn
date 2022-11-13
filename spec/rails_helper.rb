@@ -70,8 +70,11 @@ VCR.configure do |config|
   end
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
-  config.filter_sensitive_data('<app_id>') { ENV['recipe_api_id'] }
-  config.filter_sensitive_data('<app_key>') { ENV['recipe_api_key'] }
+  config.filter_sensitive_data('<recipe_app_id>') { ENV['recipe_api_id'] }
+  config.filter_sensitive_data('<recipe_app_key>') { ENV['recipe_api_key'] }
+  config.filter_sensitive_data('<google_api_key>') { ENV['google_api_key'] }
+  config.filter_sensitive_data('<unsplash_access_key>') { ENV['unsplash_access_key'] }
+  config.filter_sensitive_data('<unsplash_secret_key>') { ENV['unsplash_secret_key'] }
   config.configure_rspec_metadata!
   config.default_cassette_options = { re_record_interval: 30.days }
   config.allow_http_connections_when_no_cassette = true
