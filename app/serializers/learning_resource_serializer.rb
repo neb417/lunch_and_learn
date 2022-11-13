@@ -1,5 +1,5 @@
 class LearningResourceSerializer
-  def self.serialze_media(country, video_title, video_id)
+  def self.serialze_media(country, video_title, video_id, images)
     {
       "data": {
         "id": nil,
@@ -9,13 +9,13 @@ class LearningResourceSerializer
           "video": {
             "title": video_title,
             "youtube_video_id": video_id
-          } # ,
-          # "images": images.map do |image|
-          # {
-          #   'alt_tag': image[:title],
-          #   'url': image[:url]
-          # }
-          # end
+          },
+          "images": images.map do |image|
+          {
+            'alt_tag': image[:image_title],
+            'url': image[:image_url]
+          }
+          end
         }
       }
     }
