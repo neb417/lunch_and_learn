@@ -12,4 +12,10 @@ class UserSerializer
       }
     }
   end
+
+  def self.error_serializer(message)
+    {
+      'data': message.to_sentence
+    }
+  end
 end

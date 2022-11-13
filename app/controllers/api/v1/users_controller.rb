@@ -5,9 +5,9 @@ class Api::V1::UsersController < ApplicationController
     if user.save
       params[:api_key] = user.generate_api
       user.update(user_params)
-      render json: UserSerializer.serialize_user(user)
+      render json: UserSerializer.serialize_user(user), status: 201
     else
-      render json: {error: 'nope'}
+      render json: UserSerializer.error_serializer(user.errors.full_messages), status: 400
     end
   end
 

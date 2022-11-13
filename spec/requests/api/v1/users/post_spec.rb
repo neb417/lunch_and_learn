@@ -7,10 +7,10 @@ RSpec.describe 'Users Post Request' do
     end
 
     it 'uses request body to create user' do
-      user = JSON.parse(response.body, symbolize_names: true)
-
+      expect(request.POST.empty?).to be false
+      expect(request.GET.empty?).to be true
       expect(response).to be_successful
-      expect(response.status).to eq(200)
+      expect(response.status).to eq(201)
       expect(response.body).to be_a String
     end
 
@@ -30,6 +30,17 @@ RSpec.describe 'Users Post Request' do
       expect(user[:data][:attributes][:name]).to be_a String
       expect(user[:data][:attributes][:email]).to be_a String
       expect(user[:data][:attributes][:api_key]).to be_a String
+    end
+  end
+  describe 'user not created' do
+    it 'returns error when email already exists' do
+      User.create!(name: 'Athena Dao', email: 'athenadao@bestgirlever.com')
+      post api_v1_users_path, params: { name: 'Athena Dao', email: 'athenadao@bestgirlever.com' }
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(error[:data]).to eq('Email has already been taken')
     end
   end
 end
