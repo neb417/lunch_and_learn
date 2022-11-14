@@ -77,7 +77,7 @@ RSpec.describe 'Places Tourist Sites Request' do
 
     it 'returns successful response' do
       expect(response).to_not be_successful
-      expect(response.status).to eq(404)
+      expect(response.status).to eq(400)
       expect(response.body).to be_a String
 
       error = JSON.parse(response.body, symbolize_names: true)
