@@ -21,7 +21,7 @@ RSpec.describe ImagePoro do
          'https://images.unsplash.com/photo-...' 
         }
     }
-    
+
     image = ImagePoro.new(hash)
     expect(image.image_title).to eq(hash[:description])
     expect(image.image_url).to eq(hash[:urls][:full])
