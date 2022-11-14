@@ -4,7 +4,7 @@ class CountryService
     parse(response)
   end
 
-  def self.call_for_capital(country)
+  def self.call_for_country_info(country)
     response = conn.get("/v3.1/name/#{country}")
     parse(response)
   end

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2022 17:09:18 GMT
+      - Mon, 14 Nov 2022 23:02:13 GMT
       Server:
       - Apache/2.4.38 (Debian)
       Cache-Control:
@@ -45,7 +45,7 @@ http_interactions:
         republika","common":"Francúzsko"},"spa":{"official":"República francés","common":"Francia"},"swe":{"official":"Republiken
         Frankrike","common":"Frankrike"},"tur":{"official":"Fransa Cumhuriyeti","common":"Fransa"},"urd":{"official":"جمہوریہ
         فرانس","common":"فرانس"},"zho":{"official":"法兰西共和国","common":"法国"}},"latlng":[46.0,2.0],"landlocked":false,"borders":["AND","BEL","DEU","ITA","LUX","MCO","ESP","CHE"],"area":551695.0,"demonyms":{"eng":{"f":"French","m":"French"},"fra":{"f":"Française","m":"Français"}},"flag":"\uD83C\uDDEB\uD83C\uDDF7","maps":{"googleMaps":"https://goo.gl/maps/g7QxxSFsWyTPKuzd7","openStreetMaps":"https://www.openstreetmap.org/relation/1403916"},"population":67391582,"gini":{"2018":32.4},"fifa":"FRA","car":{"signs":["F"],"side":"right"},"timezones":["UTC-10:00","UTC-09:30","UTC-09:00","UTC-08:00","UTC-04:00","UTC-03:00","UTC+01:00","UTC+02:00","UTC+03:00","UTC+04:00","UTC+05:00","UTC+10:00","UTC+11:00","UTC+12:00"],"continents":["Europe"],"flags":{"png":"https://flagcdn.com/w320/fr.png","svg":"https://flagcdn.com/fr.svg"},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/fr.png","svg":"https://mainfacts.com/media/images/coats_of_arms/fr.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[48.87,2.33]},"postalCode":{"format":"#####","regex":"^(\\d{5})$"}}]'
-  recorded_at: Mon, 14 Nov 2022 17:09:18 GMT
+  recorded_at: Mon, 14 Nov 2022 23:02:13 GMT
 - request:
     method: get
     uri: https://api.geoapify.com/v2/places?apiKey=<geo_api_key>&categories=tourism.sights&filter=circle:2.33,48.87,20000
@@ -65,7 +65,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2022 17:09:26 GMT
+      - Mon, 14 Nov 2022 23:02:28 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -95,13 +95,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mmWLysytFxzX6YMo4Fr%2FIwH8mOFIPWvP3Ke%2B86BqucnJGkZoUSoSsC%2F5g6YUMmdksV2hhVisdkNvgZT6qRQDHiamWlHKBVS9PmkwDrB02riABkI2hdwmS8D96M8UJqrb0NSHlmbA4RivLCgBEto%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=UJ9Xe%2B%2Bax43RtKT17FJl0tUmNlMqZYlktGtZcM7aQ5SP4dsTH2TGmFjGoFUoAhgI9379MXrY1YIZA1juCL%2BMiU%2BnG99Es9kJZVwZLxnPMUzeKDK5zoFX1VKsQit92KwwESqwoOwBrI18aIsBiko%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 76a15aa84b5f7fa0-ORD
+      - 76a35fa0a9ee2ab6-ORD
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -326,5 +326,5 @@ http_interactions:
         des Gobelins","wheelchair":"yes","opening_hours":"Tu-Su 11:00-18:00; Dec 25
         off; Jan 01 off; May 01 off; Dec 31 11:00-17:00","contact:street":"Avenue
         des Gobelins","contact:housenumber":42}},"place_id":"51462f41e60dd1024059c74fc9dbd56a4840f00102f901d47e9a09000000009203184d616e75666163747572652064657320476f62656c696e73"},"geometry":{"type":"Point","coordinates":[2.352077292312887,48.83465144471807]}}]}'
-  recorded_at: Mon, 14 Nov 2022 17:09:27 GMT
+  recorded_at: Mon, 14 Nov 2022 23:02:29 GMT
 recorded_with: VCR 6.1.0

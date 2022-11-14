@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.edamam.com/api/recipes/v2?app_id=3dd5fb33&app_key=<recipe_app_key>&q=etwouic&random=true&type=public
+    uri: https://restcountries.com/v3.1/name/etwouic
     body:
       encoding: US-ASCII
       string: ''
@@ -15,31 +15,19 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: ''
+      code: 404
+      message: Not Found
     headers:
-      Server:
-      - openresty
       Date:
-      - Sun, 13 Nov 2022 16:22:44 GMT
+      - Mon, 14 Nov 2022 23:02:34 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
       Content-Type:
       - application/json
       Content-Length:
-      - '49'
-      Connection:
-      - keep-alive
-      Cache-Control:
-      - private
-      Expires:
-      - Thu, 01 Jan 1970 00:00:00 GMT
-      X-Served-By:
-      - ip-10-0-1-36.ec2.internal/10.0.1.36
-      Strict-Transport-Security:
-      - max-age=15552001
-      X-Request-Id:
-      - 51d611c7b6e43a115408e3dd06be96c7
+      - '36'
     body:
       encoding: UTF-8
-      string: '{"from":1,"to":0,"count":0,"_links":{},"hits":[]}'
-  recorded_at: Sun, 13 Nov 2022 16:22:44 GMT
+      string: '{"status":404,"message":"Not Found"}'
+  recorded_at: Mon, 14 Nov 2022 23:02:34 GMT
 recorded_with: VCR 6.1.0
