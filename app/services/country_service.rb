@@ -13,4 +13,5 @@ class CountryService
   end
 
   private_class_method :conn, :parse
+
 end
