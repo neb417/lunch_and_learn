@@ -8,6 +8,6 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def error_message(message)
-    render json: ErrorSerializer.error_seralizer(message, params[:country]), status: 400
+    render json: ErrorSerializer.error_serializer(message, params[:country]), status: 400
   end
 end

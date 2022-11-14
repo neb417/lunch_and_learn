@@ -14,13 +14,4 @@ class PlaceSerializer
       end
     }
   end
-
-  def self.error_serializer(country, message)
-    {
-      "data":
-        {
-          "message": "Country input '#{country}' #{message[:message].downcase}"
-        }
-    }
-  end
 end

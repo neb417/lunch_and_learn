@@ -1,5 +1,5 @@
 class ErrorSerializer
-  def self.error_seralizer(message, input)
+  def self.error_serializer(message, input)
     {
       "data":
         {
