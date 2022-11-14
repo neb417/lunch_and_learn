@@ -8,7 +8,7 @@ class PlaceSerializer
           "attributes": {
             "name": place[:name],
             "address": place[:address],
-            "place_id": place[:id].to_s
+            "place_id": place[:place_id]
           }
         }
       end

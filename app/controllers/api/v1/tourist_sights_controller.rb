@@ -1,4 +1,4 @@
-class Api::V1::TouristSitesController < ApplicationController
+class Api::V1::TouristSightsController < ApplicationController
   def index
     latlng = CountryFacade.return_capital_latlng(params[:country])
     places = PlaceFacade.return_places(latlng)

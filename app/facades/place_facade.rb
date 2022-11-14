@@ -5,7 +5,7 @@ class PlaceFacade
       {
         name: place[:properties][:name],
         address: place[:properties][:formatted],
-        place_id: place[:properties][:datasource][:raw][:osm_id]
+        place_id: place[:properties][:place_id]
       }
     end
   end
