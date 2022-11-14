@@ -1,5 +1,5 @@
 class LearningResourceSerializer
-  def self.serialze_media(country, video_title, video_id, images)
+  def self.serialize_media(country, video, images)
     {
       "data": {
         "id": nil,
@@ -7,8 +7,8 @@ class LearningResourceSerializer
         "attributes": {
           "country": country,
           "video": {
-            "title": video_title,
-            "youtube_video_id": video_id
+            "title": video.title,
+            "youtube_video_id": video.id
           },
           "images": images.map do |image|
           {
