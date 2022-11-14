@@ -5,12 +5,16 @@ class Api::V1::TouristSightsController < ApplicationController
     return_sites(country, latlng)
   end
 
+  private
+
   def return_sites(country, latlng)
-    if latlng.include?(:status)
-      render json: PlaceSerializer.error_serializer(country, latlng), status: 400
-    else
-      places = PlaceFacade.return_places(latlng)
-      render json: PlaceSerializer.serialize_place(places)
-    end
+    return country_error(country, latlng) if latlng.include?(:status)
+
+    places = PlaceFacade.return_places(latlng)
+    render json: PlaceSerializer.serialize_place(places)
+  end
+
+  def country_error(country, latlng)
+    render json: PlaceSerializer.error_serializer(country, latlng), status: 400
   end
 end

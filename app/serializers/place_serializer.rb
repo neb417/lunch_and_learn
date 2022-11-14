@@ -6,9 +6,9 @@ class PlaceSerializer
           "id": nil,
           "type": 'tourist_site',
           "attributes": {
-            "name": place[:name],
-            "address": place[:address],
-            "place_id": place[:place_id]
+            "name": place.name,
+            "address": place.address,
+            "place_id": place.place_id
           }
         }
       end
