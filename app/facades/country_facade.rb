@@ -11,11 +11,9 @@ class CountryFacade
   end
 
   def self.country_return(info)
-    if info.include?(:status)
-      info
-    else
-      country_info = info.first
-      country_info[:capitalInfo][:latlng]
-    end
+    return info if info.include?(:status)
+
+    country_info = info.first
+    country_info[:capitalInfo][:latlng]
   end
 end
