@@ -1,15 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe 'Favorites Post Request' do
-  describe 'uses passed favorite info to return add to user' do
-    let!(:users) { create_list :user, 3 }
-    let!(:user1) { users.first }
-    let!(:user2) { users.second }
-    let!(:user3) { users.last }
+  let!(:users) { create_list :user, 3 }
+  let!(:user1) { users.first }
+  let!(:user2) { users.second }
+  let!(:user3) { users.last }
 
-    let!(:fav1) { create :favorite, user_id: user1.id }
-    let!(:fav2) { create :favorite, user_id: user1.id }
-    let!(:fav3) { create :favorite, user_id: user2.id }
+  let!(:fav1) { create :favorite, user_id: user1.id }
+  let!(:fav2) { create :favorite, user_id: user1.id }
+  let!(:fav3) { create :favorite, user_id: user2.id }
+
+  describe 'uses passed favorite info to return add to user' do
 
     before :each do
       get api_v1_favorites_path, params: {
@@ -43,6 +44,21 @@ RSpec.describe 'Favorites Post Request' do
       all_favs = Favorite.all
       expect(recipes.count).to eq 2
       expect(recipes.count).to be < all_favs.count
+    end
+  end
+
+  describe 'returns empty array when user has 0 favorites' do
+    it 'returns empty array' do
+      get api_v1_favorites_path, params: {
+        api_key: user3.api_key
+      }
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+      expect(response.body).to be_a String
+
+      recipes = JSON.parse(response.body, symbolize_names: true)
+
+      expect(recipes[:data].empty?).to be true
     end
   end
 
