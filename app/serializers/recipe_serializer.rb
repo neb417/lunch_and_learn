@@ -6,10 +6,10 @@ class RecipeSerializer
           "id": nil,
           "type": 'recipe',
           "attributes": {
-            "title": recipe[:title],
-            "url": recipe[:url],
+            "title": recipe.title,
+            "url": recipe.url,
             "country": country,
-            "image": recipe[:image]
+            "image": recipe.image
           }
         }
       end
