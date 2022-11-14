@@ -34,9 +34,10 @@ RSpec.describe 'Favorites Post Request' do
     end
 
     it 'sends error' do
+      error = JSON.parse(response.body, symbolize_names: true)
       expect(response).to_not be_successful
-      expect(response.status).to eq(403)
-      expect(response.body).to eq( "{\"error\":\"Invalid credentials\"}")
+      expect(response.status).to eq(400)
+      expect(error).to eq({ error: 'Invalid credentials' })
     end
   end
 end
