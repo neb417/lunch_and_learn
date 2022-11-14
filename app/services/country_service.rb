@@ -4,6 +4,11 @@ class CountryService
     parse(response)
   end
 
+  def self.call_for_capital(country)
+    response = conn.get("/v3.1/name/#{country}")
+    parse(response)
+  end
+
   def self.conn
     Faraday.new('https://restcountries.com')
   end

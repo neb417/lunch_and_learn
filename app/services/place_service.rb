@@ -1,7 +1,7 @@
 class PlaceService
-  def self.call_for_place(latlng, country)
+  def self.call_for_place(latlng)
     response = conn.get('/v2/places') do |req|
-      req.params[:filter] = "circle: lt,lng, 20000"
+      req.params[:filter] = "circle:#{latlng.last},#{latlng.first},20000"
       req.params[:categories] = "tourism.sights"
     end
     parse(response)

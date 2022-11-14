@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :learning_resources, only: :index
       resources :users, only: :create
       resources :favorites, only: :create
+      resources :tourist_sites, only: :index
     end
   end
 end

@@ -1,5 +1,5 @@
 class PlaceSerializer
-  def self.serialize_place(places, country)
+  def self.serialize_place(places)
     {
       "data": places.map do |place|
         {
