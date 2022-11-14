@@ -12,8 +12,8 @@ class LearningResourceSerializer
           },
           "images": images.map do |image|
           {
-            'alt_tag': image[:image_title],
-            'url': image[:image_url]
+            'alt_tag': image.image_title,
+            'url': image.image_url
           }
           end
         }
