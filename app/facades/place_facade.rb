@@ -1,7 +1,11 @@
 class PlaceFacade
   def self.return_places(latlng)
     places = PlaceService.call_for_place(latlng)
-    places[:features].map do |place|
+    site_mapping(places[:features])
+  end
+
+  def self.site_mapping(places)
+    places.map do |place|
       {
         name: place[:properties][:name],
         address: place[:properties][:formatted],
