@@ -2,7 +2,7 @@ class PlaceService
   def self.call_for_place(latlng)
     response = conn.get('/v2/places') do |req|
       req.params[:filter] = "circle:#{latlng.last},#{latlng.first},20000"
-      req.params[:categories] = "tourism.sights"
+      req.params[:categories] = 'tourism.sights'
     end
     parse(response)
   end
@@ -16,5 +16,6 @@ class PlaceService
   def self.parse(response)
     JSON.parse(response.body, symbolize_names: true)
   end
+
   private_class_method :conn, :parse
 end
