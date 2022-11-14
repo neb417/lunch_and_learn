@@ -7,4 +7,16 @@ class ErrorSerializer
         }
     }
   end
+
+  def self.error_credentials_serializer
+    {
+      "error": 'Invalid credentials'
+    }
+  end
+
+  def self.error_user_serializer(message)
+    {
+      'data': message.to_sentence
+    }
+  end
 end

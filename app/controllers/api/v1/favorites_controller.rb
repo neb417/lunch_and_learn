@@ -17,7 +17,7 @@ class Api::V1::FavoritesController < ApplicationController
   end
 
   def api_error
-    render json: FavoriteSerializer.error_serializer, status: 400
+    render json: ErrorSerializer.error_credentials_serializer, status: 400
   end
 
   def find_user

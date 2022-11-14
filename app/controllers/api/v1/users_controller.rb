@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     return create_user if @user.save
 
-    render json: UserSerializer.error_serializer(@user.errors.full_messages), status: 400
+    render json: ErrorSerializer.error_user_serializer(@user.errors.full_messages), status: 400
   end
 
   private
