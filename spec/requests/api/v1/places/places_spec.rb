@@ -68,7 +68,8 @@ RSpec.describe 'Places Tourist Sites Request' do
       expect(place[:attributes].count).to eq 3
     end
   end
-  describe 'extension work when country not found' do
+
+  describe 'extension work when country not found', :vcr do
     before :each do
       country = { country: 'atee3' }
       get api_v1_tourist_sights_path(country)
