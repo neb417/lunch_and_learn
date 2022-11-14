@@ -34,12 +34,38 @@ RSpec.describe 'Places Tourist Sites Request' do
     end
   end
 
-  describe 'sad path for no tourist sites returned', :vcr do
-    it 'returns no tourist sites' do
-      country = { country: 'Uruguay' }
-      get api_v1_tourist_sights_path(country)
+  describe 'extension work when country not give by user', :vcr do
+    before :each do
+      allow(CountryFacade).to receive(:select_country)
+        .and_return('romania')
+    end
+
+    it 'returns successful response' do
+      get api_v1_tourist_sights_path
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+      expect(response.body).to be_a String
+    end
+
+    it 'returns correct attributes' do
+      get api_v1_tourist_sights_path
       places = JSON.parse(response.body, symbolize_names: true)
-      binding.pry
+      expect(places).to have_key(:data)
+      expect(places[:data].first.count).to eq 3
+      place = places[:data].first
+      expect(place).to have_key(:type)
+      expect(place[:type]).to eq('tourist_site')
+      expect(place).to have_key(:id)
+      expect(place[:id]).to eq(nil)
+      expect(place).to have_key(:attributes)
+      expect(place[:attributes]).to be_a Hash
+      expect(place[:attributes]).to have_key(:name)
+      expect(place[:attributes]).to have_key(:address)
+      expect(place[:attributes]).to have_key(:place_id)
+      expect(place[:attributes][:name]).to be_a String
+      expect(place[:attributes][:address]).to be_a String
+      expect(place[:attributes][:place_id]).to be_a String
+      expect(place[:attributes].count).to eq 3
     end
   end
 end

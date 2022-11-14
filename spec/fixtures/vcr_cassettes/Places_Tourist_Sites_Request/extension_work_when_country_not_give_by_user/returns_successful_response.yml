@@ -1,0 +1,294 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://restcountries.com/v3.1/name/romania
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:54:48 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1109'
+    body:
+      encoding: UTF-8
+      string: '[{"name":{"common":"Romania","official":"Romania","nativeName":{"ron":{"official":"România","common":"România"}}},"tld":[".ro"],"cca2":"RO","ccn3":"642","cca3":"ROU","cioc":"ROU","independent":true,"status":"officially-assigned","unMember":true,"currencies":{"RON":{"name":"Romanian
+        leu","symbol":"lei"}},"idd":{"root":"+4","suffixes":["0"]},"capital":["Bucharest"],"altSpellings":["RO","Rumania","Roumania","România"],"region":"Europe","subregion":"Southeast
+        Europe","languages":{"ron":"Romanian"},"translations":{"ara":{"official":"رومانيا","common":"رومانيا"},"bre":{"official":"Roumania","common":"Roumania"},"ces":{"official":"Rumunsko","common":"Rumunsko"},"cym":{"official":"Romania","common":"Romania"},"deu":{"official":"Rumänien","common":"Rumänien"},"est":{"official":"Rumeenia","common":"Rumeenia"},"fin":{"official":"Romania","common":"Romania"},"fra":{"official":"Roumanie","common":"Roumanie"},"hrv":{"official":"Rumunija","common":"Rumunjska"},"hun":{"official":"Románia","common":"Románia"},"ita":{"official":"Romania","common":"Romania"},"jpn":{"official":"ルーマニア","common":"ルーマニア"},"kor":{"official":"루마니아","common":"루마니아"},"nld":{"official":"Roemenië","common":"Roemenië"},"per":{"official":"رومانی","common":"رومانی"},"pol":{"official":"Rumunia","common":"Rumunia"},"por":{"official":"Romênia","common":"Roménia"},"rus":{"official":"Румыния","common":"Румыния"},"slk":{"official":"Rumunsko","common":"Rumunsko"},"spa":{"official":"Rumania","common":"Rumania"},"swe":{"official":"Rumänien","common":"Rumänien"},"tur":{"official":"Romanya","common":"Romanya"},"urd":{"official":"رومانیہ","common":"رومانیہ"},"zho":{"official":"罗马尼亚","common":"罗马尼亚"}},"latlng":[46.0,25.0],"landlocked":false,"borders":["BGR","HUN","MDA","SRB","UKR"],"area":238391.0,"demonyms":{"eng":{"f":"Romanian","m":"Romanian"},"fra":{"f":"Roumaine","m":"Roumain"}},"flag":"\uD83C\uDDF7\uD83C\uDDF4","maps":{"googleMaps":"https://goo.gl/maps/845hAgCf1mDkN3vr7","openStreetMaps":"https://www.openstreetmap.org/relation/90689"},"population":19286123,"gini":{"2018":35.8},"fifa":"ROU","car":{"signs":["RO"],"side":"right"},"timezones":["UTC+02:00"],"continents":["Europe"],"flags":{"png":"https://flagcdn.com/w320/ro.png","svg":"https://flagcdn.com/ro.svg"},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/ro.png","svg":"https://mainfacts.com/media/images/coats_of_arms/ro.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[44.43,26.1]},"postalCode":{"format":"######","regex":"^(\\d{6})$"}}]'
+  recorded_at: Mon, 14 Nov 2022 17:54:48 GMT
+- request:
+    method: get
+    uri: https://api.geoapify.com/v2/places?apiKey=<geo_api_key>&categories=tourism.sights&filter=circle:26.1,44.43,20000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:54:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '1.0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - accept, accept-language, content-language, access-control-max-age, access-control-allow-headers,
+        access-control-allow-methods, access-control-allow-origin, allow, api-version,
+        cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary,
+        cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop,
+        accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent,
+        cf-connecting-ip, cf-pseudo-ipv4, x-forwarded-port
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS, PUT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Cache-Control:
+      - private, max-age=0, no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rt2cH9DfhWEVi4RmpLs0wyYl7RMrpxr5yaVVf3vOfyIVTY3Kk%2Bwc%2FQzNMKCkn%2FSlAkgzfk4EypAxpNpgx6czgjJgtQjC9CvK1d8ljLgnx%2FamasP%2FLj%2B%2FscrtgPmLPXGSP5pQLhiVRzNaa9TuVCg%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76a19d4d2abe873b-ORD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Observatorul
+        Astronomic Municipal \"Amiral Vasile Urseanu\" Bucuresti","housenumber":"21","street":"Bulevardul
+        Lascăr Catargiu","district":"Sector 1","city":"Bucharest","postcode":"010662","country":"Romania","country_code":"ro","lon":26.092815,"lat":44.448646,"formatted":"\"Admiral
+        Vasile Urseanu\" Bucharest City Observatory, Bulevardul Lascăr Catargiu 21,
+        010662 Bucharest, Romania","address_line1":"\"Admiral Vasile Urseanu\" Bucharest
+        City Observatory","address_line2":"Bulevardul Lascăr Catargiu 21, 010662 Bucharest,
+        Romania","categories":["entertainment","entertainment.museum","leisure","leisure.park","leisure.park.garden","man_made","tourism.sights"],"details":["details","details.contact"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"LMI":"B-II-m-B-271","name":"Observatorul
+        Astronomic Municipal \"Amiral Vasile Urseanu\" Bucuresti","email":"dialog@astro-urseanu.ro","phone":"021/212.96.44","osm_id":2634651829,"leisure":"garden","name:en":"\"Admiral
+        Vasile Urseanu\" Bucharest City Observatory","tourism":"museum","website":"http://www.astro-urseanu.ro","man_made":"telescope","osm_type":"n","addr:city":"București","start_date":1956,"SIRUTA:code":179141,"addr:street":"Bulevardul
+        Lascăr Catargiu","museum_type":"Natural Sciences - Observatory","addr:postcode":"010662","opening_hours":"17:00-21:00;
+        Mo,Tu closed","tourism_survey":"21.10.2013 14:39:41","addr:housenumber":21,"codul_entității_muzeale":7083506}},"place_id":"5107944db9c2173a4059c2d66d3b6d394640f00103f901b598099d000000009203434f627365727661746f72756c20417374726f6e6f6d6963204d756e69636970616c2022416d6972616c20566173696c652055727365616e752220427563757265737469"},"geometry":{"type":"Point","coordinates":[26.092814999999998,44.44864600051143]}},{"type":"Feature","properties":{"name":"Muzeul
+        Memorial \"Dimitrie și Aurelia Ghiata\"","housenumber":"14","street":"Strada
+        Doctor Jean Clunet","suburb":"Cotroceni","district":"Sector 5","city":"Bucharest","postcode":"050527","country":"Romania","country_code":"ro","lon":26.074094,"lat":44.432204,"formatted":"\"Dimitrie
+        and Aurelia Ghiata\" Memorial Museum, Strada Doctor Jean Clunet 14, 050527
+        Bucharest, Romania","address_line1":"\"Dimitrie and Aurelia Ghiata\" Memorial
+        Museum","address_line2":"Strada Doctor Jean Clunet 14, 050527 Bucharest, Romania","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.contact","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Muzeul
+        Memorial \"Dimitrie și Aurelia Ghiata\"","email":"national.art@art.museum.ro","osm_id":2634651903,"name:en":"\"Dimitrie
+        and Aurelia Ghiata\" Memorial Museum","tourism":"museum","historic":"memorial","osm_type":"n","wikidata":"Q18542262","addr:city":"București","start_date":1992,"SIRUTA:code":179187,"addr:street":"Strada
+        Doctor Jean Clunet","addr:postcode":"050527","opening_hours":"closed","tourism_survey":"30.09.2013
+        12:50:47","addr:housenumber":14,"codul_entității_muzeale":7300210}},"place_id":"516fd40ad3f7123a40595ab3ef7552374640f00103f901ff98099d0000000092032d4d757a65756c204d656d6f7269616c202244696d697472696520c8996920417572656c69612047686961746122"},"geometry":{"type":"Point","coordinates":[26.074094,44.432204000512414]}},{"type":"Feature","properties":{"name":"Muzeul
+        Memorial \"Dr. Victor Babeș\"","housenumber":"14A","street":"Strada Poet Andrei
+        Mureșanu","suburb":"Dorobanți","district":"Sector 1","city":"Bucharest","postcode":"011843","country":"Romania","country_code":"ro","lon":26.091329,"lat":44.460065,"formatted":"\"Dr.
+        Victor Babes\" Memorial Museum, Strada Poet Andrei Mureșanu 14A, 011843 Bucharest,
+        Romania","address_line1":"\"Dr. Victor Babes\" Memorial Museum","address_line2":"Strada
+        Poet Andrei Mureșanu 14A, 011843 Bucharest, Romania","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.contact","details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"LMI":"B-II-m-B-1927","name":"Muzeul
+        Memorial \"Dr. Victor Babeș\"","phone":"021/230.23.02","osm_id":2634651916,"name:en":"\"Dr.
+        Victor Babes\" Memorial Museum","tourism":"museum","website":"http://museum.ici.ro/mbucur/romanian/babes.htm","historic":"memorial","osm_type":"n","addr:city":"București","start_date":1954,"SIRUTA:code":179141,"addr:street":"Strada
+        Poet Andrei Mureșanu","museum_type":"Memorials -","addr:postcode":"011843","opening_hours":"10:00-16:00;
+        Mo,Tu closed","description:ro":"Muzeul a luat fiinta in anul 1954 pe baza
+        donatiei facute de Mircea V. Babes si a fost inaugurat in 1955 in frumoasa
+        vila din strada Andrei Muresanu.","tourism_survey":"30.09.2013 12:50:47","addr:housenumber":"14A","codul_entității_muzeale":7083504}},"place_id":"51282d5c5661173a40592c9df168e33a4640f00103f9010c99099d000000009203234d757a65756c204d656d6f7269616c202244722e20566963746f722042616265c89922"},"geometry":{"type":"Point","coordinates":[26.091329,44.46006500051075]}},{"type":"Feature","properties":{"name":"Muzeul
+        Memorial \"George Călinescu\"","housenumber":"53","street":"Strada George
+        Călinescu","suburb":"Primăverii","district":"Sector 1","city":"Bucharest","postcode":"011692","country":"Romania","country_code":"ro","lon":26.099546,"lat":44.462162,"formatted":"\"George
+        Calinescu\" Memorial Museum, Strada George Călinescu 53, 011692 Bucharest,
+        Romania","address_line1":"\"George Calinescu\" Memorial Museum","address_line2":"Strada
+        George Călinescu 53, 011692 Bucharest, Romania","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.contact","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"LMI":"B-II-m-B-18411","name":"Muzeul
+        Memorial \"George Călinescu\"","phone":"021/231.31.63","osm_id":2634651941,"name:en":"\"George
+        Calinescu\" Memorial Museum","tourism":"museum","historic":"memorial","osm_type":"n","wikidata":"Q18542263","addr:city":"București","SIRUTA:code":179141,"addr:street":"Strada
+        George Călinescu","addr:postcode":"011692","opening_hours":"Tu,Fr 10:00-14:00;
+        Mo closed","tourism_survey":"30.09.2013 12:50:47","addr:housenumber":53,"codul_entității_muzeale":7300402}},"place_id":"519772bed87b193a4059d2d2da1f283b4640f00103f9012599099d000000009203234d757a65756c204d656d6f7269616c202247656f7267652043c4836c696e6573637522"},"geometry":{"type":"Point","coordinates":[26.099546,44.46216200051062]}},{"type":"Feature","properties":{"name":"Casa
+        Memorială \"George și Agatha Bacovia\"","housenumber":"63","street":"Strada
+        George Bacovia","suburb":"Giurgiului","district":"Sector 4","city":"Bucharest","postcode":"040691","country":"Romania","country_code":"ro","lon":26.101241,"lat":44.397006,"formatted":"\"George
+        and Agatha Bacovia\" Memorial House, Strada George Bacovia 63, 040691 Bucharest,
+        Romania","address_line1":"\"George and Agatha Bacovia\" Memorial House","address_line2":"Strada
+        George Bacovia 63, 040691 Bucharest, Romania","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.contact","details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Casa
+        Memorială \"George și Agatha Bacovia\"","phone":"021/332.45.47","osm_id":2634651950,"name:en":"\"George
+        and Agatha Bacovia\" Memorial House","tourism":"museum","website":"http://www.mlr.ro/newindex.htm","historic":"memorial","osm_type":"n","addr:city":"București","start_date":1958,"SIRUTA:code":179178,"addr:street":"Strada
+        George Bacovia","addr:postcode":"040691","opening_hours":"We-Fr 10:00-17:00;
+        Mo,Tu closed","description:en":"The museum was organized in the house where
+        the poet lived, between 1933 and 1957 and inaugurated in 1966.","description:ro":"Organizat
+        in casa in care a locuit poetul, intre anii 1933 - 1957, muzeul a fost inaugurat
+        in 1966.","tourism_survey":"03.10.2013 16:08:28","addr:housenumber":63,"codul_entității_muzeale":7300407}},"place_id":"51ac0320eeea193a40594543b617d1324640f00103f9012e99099d0000000092032b43617361204d656d6f7269616cc483202247656f72676520c8996920416761746861204261636f76696122"},"geometry":{"type":"Point","coordinates":[26.101241,44.3970060005145]}},{"type":"Feature","properties":{"name":"Casa
+        Memorială \"Ion Minulescu\"","housenumber":"19","street":"Bulevardul Profesor
+        Doctor Gheorghe Marinescu","suburb":"Cotroceni","district":"Sector 5","city":"Bucharest","postcode":"050482","country":"Romania","country_code":"ro","lon":26.067039,"lat":44.434678,"formatted":"\"Ion
+        Minulescu\" Memorial House, Bulevardul Profesor Doctor Gheorghe Marinescu
+        19, 050482 Bucharest, Romania","address_line1":"\"Ion Minulescu\" Memorial
+        House","address_line2":"Bulevardul Profesor Doctor Gheorghe Marinescu 19,
+        050482 Bucharest, Romania","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.contact","details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Casa
+        Memorială \"Ion Minulescu\"","phone":"021/317.90.41","osm_id":2634651992,"name:en":"\"Ion
+        Minulescu\" Memorial House","tourism":"museum","website":"http://www.mlr.ro/newindex.htm","historic":"memorial","osm_type":"n","addr:city":"București","start_date":1991,"SIRUTA:code":179196,"addr:street":"Bulevardul
+        Profesor Doctor Gheorghe Marinescu","addr:postcode":"050482","opening_hours":"10:00-17:00;
+        Mo closed","tourism_survey":"03.10.2013 16:08:28","addr:housenumber":19,"codul_entității_muzeale":7300405}},"place_id":"51798ec87729113a4059d73e5a87a3374640f00103f9015899099d0000000092031f43617361204d656d6f7269616cc4832022496f6e204d696e756c6573637522"},"geometry":{"type":"Point","coordinates":[26.067038999999998,44.434678000512285]}},{"type":"Feature","properties":{"name":"Casa
+        Memorială \"Liviu Rebreanu - Fanny Rebreanu\"","housenumber":"19","street":"Bulevardul
+        Profesor Doctor Gheorghe Marinescu","suburb":"Cotroceni","district":"Sector
+        5","city":"Bucharest","postcode":"050482","country":"Romania","country_code":"ro","lon":26.067024,"lat":44.434835,"formatted":"\"Liviu
+        Rebreanu and Fanny Rebreanu\" Memorial House, Bulevardul Profesor Doctor Gheorghe
+        Marinescu 19, 050482 Bucharest, Romania","address_line1":"\"Liviu Rebreanu
+        and Fanny Rebreanu\" Memorial House","address_line2":"Bulevardul Profesor
+        Doctor Gheorghe Marinescu 19, 050482 Bucharest, Romania","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.contact","details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Casa
+        Memorială \"Liviu Rebreanu - Fanny Rebreanu\"","phone":"021/317.90.42","osm_id":2634652016,"name:en":"\"Liviu
+        Rebreanu and Fanny Rebreanu\" Memorial House","tourism":"museum","website":"http://www.mlr.ro/newindex.htm","historic":"memorial","osm_type":"n","addr:city":"București","start_date":1992,"SIRUTA:code":179196,"addr:street":"Bulevardul
+        Profesor Doctor Gheorghe Marinescu","addr:postcode":"050482","opening_hours":"10:00-17:00;
+        Mo closed","tourism_survey":"27.09.2013 12:54:12","addr:housenumber":19,"codul_entității_muzeale":7300406}},"place_id":"510f0c207c28113a40599d2d5daca8374640f00103f9017099099d0000000092033143617361204d656d6f7269616cc48320224c69766975205265627265616e75202d2046616e6e79205265627265616e7522"},"geometry":{"type":"Point","coordinates":[26.067024,44.43483500051227]}},{"type":"Feature","properties":{"name":"Casa
+        Memorială \"Tudor Arghezi\"","housenumber":"26","street":"Strada Mărțișor","suburb":"Văcărești","district":"Sector
+        4","city":"Bucharest","postcode":"041242","country":"Romania","country_code":"ro","lon":26.117717,"lat":44.397241,"formatted":"\"Tudor
+        Arghezi\" Memorial House, Strada Mărțișor 26, 041242 Bucharest, Romania","address_line1":"\"Tudor
+        Arghezi\" Memorial House","address_line2":"Strada Mărțișor 26, 041242 Bucharest,
+        Romania","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.contact","details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"LMI":"B-II-m-B-19174","name":"Casa
+        Memorială \"Tudor Arghezi\"","phone":"021/332.59.00","osm_id":2634652142,"name:en":"\"Tudor
+        Arghezi\" Memorial House","tourism":"museum","website":"http://www.mlr.ro/newindex.htm","historic":"memorial","osm_type":"n","addr:city":"București","start_date":1967,"SIRUTA:code":179187,"addr:street":"Strada
+        Mărțișor","addr:postcode":"041242","opening_hours":"10:00-18:00; Mo closed","description:en":"Organized
+        in the house where the poet lived, from 1930.","description:ro":"Organizata
+        in casa in care a locuit poetul, incepand cu 1930.","tourism_survey":"30.09.2013
+        12:50:47","addr:housenumber":26,"codul_entității_muzeale":7300401}},"place_id":"51e82e89b3221e3a405987eb08cbd8324640f00103f901ee99099d0000000092031f43617361204d656d6f7269616cc48320225475646f722041726768657a6922"},"geometry":{"type":"Point","coordinates":[26.117717,44.39724100051449]}},{"type":"Feature","properties":{"name":"Monument
+        Mihai Eminescu","street":"Strada Mitropolitul Antim Ivireanu","suburb":"Centrul
+        Civic","district":"Sector 4","city":"Bucharest","postcode":"050706","country":"Romania","country_code":"ro","lon":26.0961803,"lat":44.426265,"formatted":"Monument
+        Mihai Eminescu, Strada Mitropolitul Antim Ivireanu, 050706 Bucharest, Romania","address_line1":"Monument
+        Mihai Eminescu","address_line2":"Strada Mitropolitul Antim Ivireanu, 050706
+        Bucharest, Romania","categories":["tourism","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.monument"],"details":["details","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"url":"https://www.youtube.com/watch?v=0sUxpE6LTqI","name":"Monument
+        Mihai Eminescu","image":"https://d1cuyjsrcm0gby.cloudfront.net/nvpOZiytu_fR-mfD6WMeow/thumb-2048.jpg","osm_id":6049432586,"historic":"monument","osm_type":"n","mapillary":"https://www.mapillary.com/map/im/nvpOZiytu_fR-mfD6WMeow","wikipedia":"en:Mihai
+        Eminescu"}},"place_id":"51fc04ab459f183a4059e350fed98f364640f00103f9010a049368010000009203174d6f6e756d656e74204d6968616920456d696e65736375"},"geometry":{"type":"Point","coordinates":[26.0961803,44.42626500051281]}},{"type":"Feature","properties":{"name":"Maria
+        Tănase","street":"Bulevardul Tineretului","district":"Sector 4","city":"Bucharest","postcode":"040348","country":"Romania","country_code":"ro","lon":26.1134305,"lat":44.408781,"formatted":"Maria
+        Tănase, Bulevardul Tineretului, 040348 Bucharest, Romania","address_line1":"Maria
+        Tănase","address_line2":"Bulevardul Tineretului, 040348 Bucharest, Romania","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"url":"https://www.youtube.com/watch?v=SpS_Bb9Goc4","name":"Maria
+        Tănase","image":"https://d1cuyjsrcm0gby.cloudfront.net/BH9pYmr_3n6IiFFj_dL0Wg/thumb-2048.jpg","osm_id":6049432623,"historic":"memorial","osm_type":"n","mapillary":"https://www.mapillary.com/map/im/BH9pYmr_3n6IiFFj_dL0Wg","wikipedia":"pl:Maria
+        Tănase"}},"place_id":"5172deffc7091d3a40596e3792ef52344640f00103f9012f0493680100000092030d4d617269612054c4836e617365"},"geometry":{"type":"Point","coordinates":[26.1134305,44.40878100051383]}},{"type":"Feature","properties":{"name":"Palatul
+        Bragadiru","old_name":"Casa de Cultură Lenin","street":"Calea Rahovei","suburb":"Centrul
+        Civic","district":"Sector 5","city":"Bucharest","postcode":"050892","country":"Romania","country_code":"ro","lon":26.08727688250257,"lat":44.42160795,"formatted":"Palatul
+        Bragadiru, Calea Rahovei, 050892 Bucharest, Romania","address_line1":"Palatul
+        Bragadiru","address_line2":"Calea Rahovei, 050892 Bucharest, Romania","categories":["building","building.historic","heritage","tourism","tourism.sights","tourism.sights.castle"],"details":["details","details.building","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Palatul
+        Bragadiru","osm_id":80192188,"website":"https://www.palatulbragadiru.ro/","building":"yes","heritage":2,"historic":"castle","old_name":"Casa
+        de Cultură Lenin","osm_type":"w","wikidata":"Q18545110","architect":"Anton
+        Shuckerl","wikipedia":"ro:Palatul Bragadiru","ref:ro:lmi":"B-II-m-B-19501","start_date":1898,"castle_type":"palace","heritage:operator":"LMI"}},"place_id":"51993feaba4c163a4059cbca189cf4354640f00102f901bca2c7040000000092031150616c6174756c20427261676164697275"},"geometry":{"type":"Point","coordinates":[26.08710830897289,44.42152739725642]}},{"type":"Feature","properties":{"name":"Palatul
+        Elisabeta","housenumber":"28","street":"Șoseaua Pavel Dimitrievici Kiseleff","suburb":"Herăstrău","district":"Sector
+        1","city":"Bucharest","postcode":"011347","country":"Romania","country_code":"ro","lon":26.079158280420526,"lat":44.470700750000006,"formatted":"Palatul
+        Elisabeta, Șoseaua Pavel Dimitrievici Kiseleff 28, 011347 Bucharest, Romania","address_line1":"Palatul
+        Elisabeta","address_line2":"Șoseaua Pavel Dimitrievici Kiseleff 28, 011347
+        Bucharest, Romania","categories":["building","building.historic","building.residential","no_access","tourism","tourism.sights","tourism.sights.castle"],"details":["details","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Palatul
+        Elisabeta","access":"no","osm_id":102780052,"website":"http://www.familiaregala.ro/ro/resedinte/prezentare-2/palatul-elisabeta/","building":"residential","historic":"castle","osm_type":"w","wikidata":"Q5356931","addr:city":"București","addr:street":"Șoseaua
+        Pavel Dimitrievici Kiseleff","castle_type":"stately","addr:country":"RO","addr:postcode":"011347","addr:housename":"Palatul
+        Elisabeta","addr:housenumber":28}},"place_id":"513f2a637f5f143a405983868554423c4640f00102f901944c20060000000092031150616c6174756c20456c69736162657461"},"geometry":{"type":"Point","coordinates":[26.07958217783948,44.4707742359142]}},{"type":"Feature","properties":{"name":"Grand
+        Hôtel du Boulevard","housenumber":"21","street":"Bulevardul Regina Elisabeta","suburb":"Dealul
+        Spirii","district":"Sector 5","city":"Bucharest","postcode":"050011","country":"Romania","country_code":"ro","lon":26.097821589566493,"lat":44.4345383,"formatted":"Grand
+        Hôtel du Boulevard, Bulevardul Regina Elisabeta 21, 050011 Bucharest, Romania","address_line1":"Grand
+        Hôtel du Boulevard","address_line2":"Bulevardul Regina Elisabeta 21, 050011
+        Bucharest, Romania","categories":["building","building.historic","internet_access","tourism","tourism.sights"],"details":["details","details.building","details.facilities","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Grand
+        Hôtel du Boulevard","osm_id":137689140,"website":"http://www.hotelbulevard.ro/","building":"yes","historic":"heritage_building","osm_type":"w","wikidata":"Q3113619","addr:city":"București","wikipedia":"ro:Grand
+        Hôtel du Boulevard","start_date":"1865-1871","addr:street":"Bulevardul Regina
+        Elisabeta","addr:postcode":"050011","internet_access":"yes","addr:housenumber":21,"internet_access:fee":"yes"}},"place_id":"510be1c59a0a193a40591edc76709e374640f00102f90134f83408000000009203194772616e642048c3b474656c20647520426f756c6576617264"},"geometry":{"type":"Point","coordinates":[26.097818063078233,44.4345226841326]}},{"type":"Feature","properties":{"name":"Grand
+        Hotel Continental","housenumber":"56","street":"Calea Victoriei","suburb":"Old
+        Town","district":"Sector 3","city":"Bucharest","postcode":"010083","country":"Romania","country_code":"ro","lon":26.097970338956173,"lat":44.4370264,"formatted":"Grand
+        Hotel Continental, Calea Victoriei 56, 010083 Bucharest, Romania","address_line1":"Grand
+        Hotel Continental","address_line2":"Calea Victoriei 56, 010083 Bucharest,
+        Romania","categories":["accommodation","accommodation.hotel","building","building.accommodation","building.historic","heritage","tourism","tourism.sights","tourism.sights.castle","wheelchair","wheelchair.limited"],"details":["details","details.accommodation","details.building","details.facilities","details.heritage","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Grand
+        Hotel Continental","brand":"Continental Hotels","stars":5,"osm_id":164369116,"tourism":"hotel","website":"https://grand-hotel-continental-bucuresti.continentalhotels.ro/en","building":"hotel","heritage":2,"historic":"castle","osm_type":"w","wikidata":"Q42772296","addr:city":"București","wikipedia":"ro:Grand
+        Hotel Continental","ref:ro:lmi":"B-II-m-B-19858","roof:shape":"quadruple_saltbox","start_date":"sf.
+        sec XIX","wheelchair":"limited","addr:street":"Calea Victoriei","castle_type":"palace","roof:colour":"silver","roof:levels":1,"addr:postcode":"010083","brand:wikipedia":"en:Continental
+        Hotels","building:colour":"white","building:levels":4,"addr:housenumber":56,"heritage:operator":"lmi"}},"place_id":"51c2000b611f193a4059c49b0b23f0374640f00102f901dc12cc09000000009203174772616e6420486f74656c20436f6e74696e656e74616c"},"geometry":{"type":"Point","coordinates":[26.098135056673307,44.437015896480744]}},{"type":"Feature","properties":{"name":"Palatul
+        Regal","street":"Piața George Enescu","district":"Sector 1","city":"Bucharest","postcode":"010085","country":"Romania","country_code":"ro","lon":26.095805133686092,"lat":44.439478550000004,"formatted":"Royal
+        palace, Piața George Enescu, 010085 Bucharest, Romania","address_line1":"Royal
+        palace","address_line2":"Piața George Enescu, 010085 Bucharest, Romania","categories":["building","building.historic","building.public_and_civil","internet_access","tourism","tourism.sights","tourism.sights.castle","wheelchair","wheelchair.limited"],"details":["details","details.building","details.facilities","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Palatul
+        Regal","osm_id":232472401,"name:en":"Royal palace","name:fr":"Palais royal","name:ja":"国立美術館(共和国宮殿)","building":"civic","historic":"castle","osm_type":"w","wikidata":"Q3361220","wikipedia":"ro:Palatul
+        Regal din București‎","roof:shape":"flat","start_date":1937,"wheelchair":"limited","castle_type":"palace","roof:levels":0,"opening_hours":"Tu
+        10:00-18:00","building:levels":4,"internet_access":"wlan"}},"place_id":"51ea8dfd018e183a405995405e9144384640f00102f901513fdb0d0000000092030d50616c6174756c20526567616c"},"geometry":{"type":"Point","coordinates":[26.095916866686743,44.43959252454912]}},{"type":"Feature","properties":{"name":"Biserica
+        „Sf. Visarion Vechi“","housenumber":"14","street":"Strada Visarion","suburb":"Dorobanți","district":"Sector
+        1","city":"Bucharest","postcode":"010631","country":"Romania","country_code":"ro","lon":26.095407719406197,"lat":44.4485296,"formatted":"Biserica
+        „Sf. Visarion Vechi“, Strada Visarion 14, 010631 Bucharest, Romania","address_line1":"Biserica
+        „Sf. Visarion Vechi“","address_line2":"Strada Visarion 14, 010631 Bucharest,
+        Romania","categories":["building","building.historic","building.place_of_worship","heritage","tourism","tourism.sights","tourism.sights.place_of_worship","tourism.sights.place_of_worship.church"],"details":["details","details.building","details.heritage","details.historic","details.place_of_worship","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Biserica
+        „Sf. Visarion Vechi“","osm_id":1059582467,"amenity":"place_of_worship","website":"https://doxologia.ro/locuri-de-pelerinaj/bisericile-bucurestene-inchinate-sfantului-visarion","building":"church","heritage":2,"historic":"church","osm_type":"w","religion":"christian","wikidata":"Q26257270","wikipedia":"ro:Biserica
+        „Sf. Visarion Vechi“ din București","ref:ro:lmi":"B-II-m-B-19880","start_date":1797,"addr:street":"Strada
+        Visarion","description":"In aceeaşi curte cu biserica Sfântul Visarion Nou
+        se află şi o rămăşiţă din fosta biserică parohială, cu acelaşi hram, demolată
+        în cea mai mare parte în anul 1964. S-au păstrat numai pridvorul, cu trei
+        arcade, pronaosul şi turnul scării","denomination":"orthodox","addr:housenumber":14,"heritage:operator":"lmi"}},"place_id":"515ddc71b66c183a405958a89eae69394640f00102f90103f2273f00000000920321426973657269636120e2809e53662e205669736172696f6e205665636869e2809c"},"geometry":{"type":"Point","coordinates":[26.09540882377438,44.448537662000206]}},{"type":"Feature","properties":{"name":"Casa
+        Memorială \"Constantin Joja\"","housenumber":"4","street":"Strada Ion Slătineanu","suburb":"Dorobanți","district":"Sector
+        1","city":"Bucharest","postcode":"010602","country":"Romania","country_code":"ro","lon":26.096448,"lat":44.450317,"formatted":"\"Constantin
+        Joja\" Memorial House, Strada Ion Slătineanu 4, 010602 Bucharest, Romania","address_line1":"\"Constantin
+        Joja\" Memorial House","address_line2":"Strada Ion Slătineanu 4, 010602 Bucharest,
+        Romania","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.contact"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Casa
+        Memorială \"Constantin Joja\"","phone":"0216/593.210","osm_id":2634651890,"name:en":"\"Constantin
+        Joja\" Memorial House","tourism":"museum","historic":"memorial","osm_type":"n","addr:city":"București","SIRUTA:code":179141,"addr:street":"Strada
+        Ion Slătineanu","addr:postcode":"010602","opening_hours":"10:00-16:00","tourism_survey":"03.10.2013
+        16:08:17","addr:housenumber":4,"codul_entității_muzeale":7300208}},"place_id":"51bdc3edd0b0183a4059b403cbfca3394640f00103f901f298099d0000000092032143617361204d656d6f7269616cc4832022436f6e7374616e74696e204a6f6a6122"},"geometry":{"type":"Point","coordinates":[26.096448,44.45031700051132]}},{"type":"Feature","properties":{"name":"Muzeul
+        Memorial \"Gh. M. Tattarescu\"","street":"Strada Domnița Anastasia","suburb":"Dealul
+        Spirii","district":"Sector 5","city":"Bucharest","postcode":"050034","country":"Romania","country_code":"ro","lon":26.095291,"lat":44.4337019,"formatted":"\"Gh.
+        M. Tattarescu\" Memorial Museum, Strada Domnița Anastasia, 050034 Bucharest,
+        Romania","address_line1":"\"Gh. M. Tattarescu\" Memorial Museum","address_line2":"Strada
+        Domnița Anastasia, 050034 Bucharest, Romania","categories":["entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.contact","details.historic"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"LMI":"B-II-m-B-18607","fax":"021/310.25.62","name":"Muzeul
+        Memorial \"Gh. M. Tattarescu\"","email":"mmb@b.astral.ro","phone":"021/314.10.06","osm_id":2634651951,"name:en":"\"Gh.
+        M. Tattarescu\" Memorial Museum","tourism":"museum","historic":"memorial","osm_type":"n","addr:city":"București","start_date":1953,"SIRUTA:code":179187,"addr:postcode":"050034","opening_hours":"closed","tourism_survey":"05.12.2013
+        11:37:34","codul_entității_muzeale":7084102}},"place_id":"51679ab0fd64183a4059ef743b8b83374640f00103f9012f99099d000000009203234d757a65756c204d656d6f7269616c202247682e204d2e205461747461726573637522"},"geometry":{"type":"Point","coordinates":[26.095291,44.43370190051234]}},{"type":"Feature","properties":{"name":"Compania
+        Franco-Română de Navigație Aeriană - 1922","street":"Strada Grațioasă","suburb":"Băneasa","district":"Sector
+        1","city":"Bucharest","postcode":"014051","country":"Romania","country_code":"ro","lon":26.0809867,"lat":44.496189,"formatted":"Compania
+        Franco-Română de Navigație Aeriană - 1922, Strada Grațioasă, 014051 Bucharest,
+        Romania","address_line1":"Compania Franco-Română de Navigație Aeriană - 1922","address_line2":"Strada
+        Grațioasă, 014051 Bucharest, Romania","categories":["tourism","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.monument"],"details":["details","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Compania
+        Franco-Română de Navigație Aeriană - 1922","osm_id":4089686229,"website":"http://www.ceasuripentruromania.ro/ceasuri.php?id_article=263","historic":"monument","osm_type":"n","wikipedia":"ro:Compania
+        Franco–Română de Navigație Aeriană","start_date":"1922-11-12","inscription":"Deschiderea
+        liniei aeriene internationale PARIS-BUCURESTI-CONSTANTINOPOL"}},"place_id":"5134e95b8bbb143a4059cce8041f833f4640f00103f901d5a8c3f300000000920336436f6d70616e6961204672616e636f2d526f6dc3a26ec483206465204e6176696761c89b69652041657269616ec483202d2031393232"},"geometry":{"type":"Point","coordinates":[26.080986699999997,44.49618900050845]}},{"type":"Feature","properties":{"name":"Arcul
+        de Triumf","street":"Piața Arcul de Triumf","district":"Sector 1","city":"Bucharest","country":"Romania","country_code":"ro","lon":26.07812345,"lat":44.467170100000004,"formatted":"Triumphal
+        Arch, Piața Arcul de Triumf, Bucharest, Romania","address_line1":"Triumphal
+        Arch","address_line2":"Piața Arcul de Triumf, Bucharest, Romania","categories":["building","building.historic","building.tourism","tourism","tourism.attraction","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.monument"],"details":["details","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Arcul
+        de Triumf","image":"https://d1cuyjsrcm0gby.cloudfront.net/RXq7Y3DQYrpX69Z0grvP5g/thumb-2048.jpg","is_in":"București","osm_id":217851530,"name:de":"Triumphbogen","name:en":"Triumphal
+        Arch","name:fr":"Arc de triomphe","name:it":"Arco di Trionfo","tourism":"attraction","building":"yes","historic":"monument","osm_type":"w","wikidata":"Q638278","addr:city":"București","mapillary":"https://www.mapillary.com/map/im/RXq7Y3DQYrpX69Z0grvP5g","wikipedia":"ro:Arcul
+        de Triumf din București","addr:country":"RO"}},"place_id":"51fcccfee5ff133a40592eaed73acc3b4640f00102f9018a26fc0c0000000092030f417263756c20646520547269756d66"},"geometry":{"type":"Point","coordinates":[26.078123450000007,44.4671701005103]}}]}'
+  recorded_at: Mon, 14 Nov 2022 17:54:49 GMT
+recorded_with: VCR 6.1.0
