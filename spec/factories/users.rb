@@ -1,7 +1,7 @@
 FactoryBot.define do
-  factory :create_user do
-    name { "MyString" }
-    email { "MyString" }
-    api_key { "MyString" }
+  factory :user do
+    name { Faker::Name.name }
+    email { Faker::Internet.unique.safe_email }
+    api_key { SecureRandom.urlsafe_base64 }
   end
 end
