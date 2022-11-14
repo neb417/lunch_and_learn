@@ -8,7 +8,12 @@ class CountryFacade
 
   def self.return_capital_latlng(country)
     info = CountryService.call_for_capital(country)
-    country_info = info.first
-    country_info[:capitalInfo][:latlng]
+    # binding.pry
+    if info.include?(:status)
+      info
+    else
+      country_info = info.first
+      country_info[:capitalInfo][:latlng]
+    end
   end
 end

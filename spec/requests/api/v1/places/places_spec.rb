@@ -68,4 +68,19 @@ RSpec.describe 'Places Tourist Sites Request' do
       expect(place[:attributes].count).to eq 3
     end
   end
+  describe 'extension work when country not found' do
+    before :each do
+      country = { country: 'atee3' }
+      get api_v1_tourist_sights_path(country)
+    end
+
+    it 'returns successful response' do
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+      expect(response.body).to be_a String
+
+      error = JSON.parse(response.body, symbolize_names: true)
+      expect(error[:data][:message]).to eq("Country input 'atee3' not found")
+    end
+  end
 end
