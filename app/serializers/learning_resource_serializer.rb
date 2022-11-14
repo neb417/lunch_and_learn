@@ -3,7 +3,7 @@ class LearningResourceSerializer
     {
       "data": {
         "id": nil,
-        "type": "learning_resource",
+        "type": 'learning_resource',
         "attributes": {
           "country": country,
           "video": {
