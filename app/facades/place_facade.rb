@@ -7,11 +7,6 @@ class PlaceFacade
   def self.site_mapping(places)
     places.map do |place|
       PlacePoro.new(place)
-      # {
-      #   name: place[:properties][:name],
-      #   address: place[:properties][:formatted],
-      #   place_id: place[:properties][:place_id]
-      # }
     end
   end
 end
