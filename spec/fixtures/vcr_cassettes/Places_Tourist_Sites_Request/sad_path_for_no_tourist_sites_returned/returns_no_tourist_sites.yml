@@ -1,0 +1,258 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://restcountries.com/v3.1/name/Uruguay
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:35:31 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1379'
+    body:
+      encoding: UTF-8
+      string: '[{"name":{"common":"Uruguay","official":"Oriental Republic of Uruguay","nativeName":{"spa":{"official":"República
+        Oriental del Uruguay","common":"Uruguay"}}},"tld":[".uy"],"cca2":"UY","ccn3":"858","cca3":"URY","cioc":"URU","independent":true,"status":"officially-assigned","unMember":true,"currencies":{"UYU":{"name":"Uruguayan
+        peso","symbol":"$"}},"idd":{"root":"+5","suffixes":["98"]},"capital":["Montevideo"],"altSpellings":["UY","Oriental
+        Republic of Uruguay","República Oriental del Uruguay"],"region":"Americas","subregion":"South
+        America","languages":{"spa":"Spanish"},"translations":{"ara":{"official":"جمهورية
+        الأوروغواي الشرقية","common":"الأوروغواي"},"bre":{"official":"Republik Reter
+        Uruguay","common":"Uruguay"},"ces":{"official":"Uruguayská východní republika","common":"Uruguay"},"cym":{"official":"Oriental
+        Republic of Uruguay","common":"Uruguay"},"deu":{"official":"Republik Östlich
+        des Uruguay","common":"Uruguay"},"est":{"official":"Uruguay Idavabariik","common":"Uruguay"},"fin":{"official":"Uruguayn
+        itäinen tasavalta","common":"Uruguay"},"fra":{"official":"République orientale
+        de l''Uruguay","common":"Uruguay"},"hrv":{"official":"Orijentalna Republika
+        Urugvaj","common":"Urugvaj"},"hun":{"official":"Uruguayi Keleti Köztársaság","common":"Uruguay"},"ita":{"official":"Repubblica
+        Orientale dell''Uruguay","common":"Uruguay"},"jpn":{"official":"ウルグアイ東方共和国","common":"ウルグアイ"},"kor":{"official":"우루과이
+        동방 공화국","common":"우루과이"},"nld":{"official":"Oosterse Republiek Uruguay","common":"Uruguay"},"per":{"official":"جمهوری
+        اروگوئه","common":"اروگوئه"},"pol":{"official":"Wschodnia Republika Urugwaju","common":"Urugwaj"},"por":{"official":"República
+        Oriental do Uruguai","common":"Uruguai"},"rus":{"official":"Восточной Республики
+        Уругвай","common":"Уругвай"},"slk":{"official":"Uruguajská východná republika","common":"Uruguaj"},"spa":{"official":"República
+        Oriental del Uruguay","common":"Uruguay"},"swe":{"official":"Republiken Uruguay","common":"Uruguay"},"tur":{"official":"Uruguay
+        Doğu Cumhuriyeti","common":"Uruguay"},"urd":{"official":"جمہوریہ شرقیہ یوراگوئے","common":"یوراگوئے"},"zho":{"official":"乌拉圭东岸共和国","common":"乌拉圭"}},"latlng":[-33.0,-56.0],"landlocked":false,"borders":["ARG","BRA"],"area":181034.0,"demonyms":{"eng":{"f":"Uruguayan","m":"Uruguayan"},"fra":{"f":"Uruguayenne","m":"Uruguayen"}},"flag":"\uD83C\uDDFA\uD83C\uDDFE","maps":{"googleMaps":"https://goo.gl/maps/tiQ9Baekb1jQtDSD9","openStreetMaps":"https://www.openstreetmap.org/relation/287072"},"population":3473727,"gini":{"2019":39.7},"fifa":"URU","car":{"signs":["ROU"],"side":"right"},"timezones":["UTC-03:00"],"continents":["South
+        America"],"flags":{"png":"https://flagcdn.com/w320/uy.png","svg":"https://flagcdn.com/uy.svg"},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/uy.png","svg":"https://mainfacts.com/media/images/coats_of_arms/uy.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[-34.85,-56.17]},"postalCode":{"format":"#####","regex":"^(\\d{5})$"}}]'
+  recorded_at: Mon, 14 Nov 2022 17:35:31 GMT
+- request:
+    method: get
+    uri: https://api.geoapify.com/v2/places?apiKey=<geo_api_key>&categories=tourism.sights&filter=circle:-56.17,-34.85,20000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 14 Nov 2022 17:35:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '1.0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - accept, accept-language, content-language, access-control-max-age, access-control-allow-headers,
+        access-control-allow-methods, access-control-allow-origin, allow, api-version,
+        cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary,
+        cache-control, etag, last-modified, expires, host, cf-ipcountry, cdn-loop,
+        accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent,
+        cf-connecting-ip, cf-pseudo-ipv4, x-forwarded-port
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS, PUT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      - Accept-Encoding
+      Cache-Control:
+      - private, max-age=0, no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=397hUglHg6lg0yHMxoDbYQgVJaS%2F8ZyEyCswT55eaAi02qLkmmI7w9ACu90dz3UBna%2B0rM31IVr8OYt7DsRUX6Xqo2W6hmxvA3QWLSroY%2FVH5nzWpSPsZDPR3vCjybVXnLki8OAXzSeTxKrtpTI%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76a181117b1a813d-ORD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Castillo
+        Pittamiglio","housenumber":"633","street":"Rambla Mahatma Gandhi","suburb":"Punta
+        Carretas","city":"Montevideo","state":"Montevideo","postcode":"11303","country":"Uruguay","country_code":"uy","lon":-56.1498357,"lat":-34.9209974,"formatted":"Castillo
+        Pittamiglio, Rambla Mahatma Gandhi 633, 11303 Montevideo, Uruguay","address_line1":"Castillo
+        Pittamiglio","address_line2":"Rambla Mahatma Gandhi 633, 11303 Montevideo,
+        Uruguay","categories":["tourism","tourism.sights","tourism.sights.castle"],"details":["details","details.contact","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Castillo
+        Pittamiglio","phone":"+598 2710 1089","osm_id":2670736298,"historic":"castle","osm_type":"n","wikidata":"Q5756981","addr:city":"Montevideo","addr:street":"Rambla
+        Mahatma Gandhi","castle_type":"stately","addr:country":"UY","opening_hours":"Tu,Th,Sa,Su
+        17:00","addr:housenumber":633}},"place_id":"51faa2f3d02d134cc0597213283ee37541c0f00103f901aa33309f0000000092031443617374696c6c6f2050697474616d69676c696f"},"geometry":{"type":"Point","coordinates":[-56.1498357,-34.92099739987215]}},{"type":"Feature","properties":{"name":"Faro
+        de Punta Carretas","street":"Vehicular/ Peatonal","suburb":"Punta Carretas","city":"Montevideo","state":"Montevideo","postcode":"11303","country":"Uruguay","country_code":"uy","lon":-56.160545714785414,"lat":-34.9352356,"formatted":"Faro
+        de Punta Carretas, Vehicular/ Peatonal, 11303 Montevideo, Uruguay","address_line1":"Faro
+        de Punta Carretas","address_line2":"Vehicular/ Peatonal, 11303 Montevideo,
+        Uruguay","categories":["man_made","man_made.lighthouse","tourism","tourism.attraction","tourism.attraction.viewpoint","tourism.sights","tourism.sights.lighthouse"],"details":["details","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Faro
+        de Punta Carretas","price":35,"osm_id":179735088,"tourism":"viewpoint","man_made":"lighthouse","osm_type":"w","wikidata":"Q7260513","wikipedia":"en:Punta
+        Brava Lighthouse","opening_hours":"Mo-Su 10:00-13:00, 14:30-sunset"}},"place_id":"514f95ee648c144cc05911712acfb57741c0f00102f901308ab60a000000009203164661726f2064652050756e7461204361727265746173"},"geometry":{"type":"Point","coordinates":[-56.16053449296543,-34.935235877727]}},{"type":"Feature","properties":{"name":"Obelisco
+        a los Constituyentes de 1830","street":"Avenida Doctor Luis Morquio","suburb":"Tres
+        Cruces","city":"Montevideo","state":"Montevideo","postcode":"11601","country":"Uruguay","country_code":"uy","lon":-56.1643928,"lat":-34.8973776,"formatted":"Obelisco
+        a los Constituyentes de 1830, Avenida Doctor Luis Morquio, 11601 Montevideo,
+        Uruguay","address_line1":"Obelisco a los Constituyentes de 1830","address_line2":"Avenida
+        Doctor Luis Morquio, 11601 Montevideo, Uruguay","categories":["tourism","tourism.attraction","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.monument"],"details":["details","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Obelisco
+        a los Constituyentes de 1830","osm_id":642809502,"tourism":"attraction","website":"https://www.montevideo.gub.uy/ciudad-y-cultura/arquitectura-y-patrimonio/obelisco-a-los-constituyentes","historic":"monument","osm_type":"n","wikidata":"Q1726492","wikipedia":"en:Obelisk
+        of Montevideo"}},"place_id":"5153d9c1d20a154cc059d6cbe944dd7241c0f00103f9019e7e5026000000009203254f62656c6973636f2061206c6f7320436f6e737469747579656e7465732064652031383330"},"geometry":{"type":"Point","coordinates":[-56.164392799999995,-34.89737759986717]}},{"type":"Feature","properties":{"name":"Portería
+        Primer Gol Mundial","street":"Coronel Alegre","suburb":"Pocitos","city":"Montevideo","state":"Montevideo","postcode":"11300","country":"Uruguay","country_code":"uy","lon":-56.1562213,"lat":-34.9044863,"formatted":"Portería
+        Primer Gol Mundial, Coronel Alegre, 11300 Montevideo, Uruguay","address_line1":"Portería
+        Primer Gol Mundial","address_line2":"Coronel Alegre, 11300 Montevideo, Uruguay","categories":["tourism","tourism.attraction","tourism.sights","tourism.sights.memorial"],"details":["details","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Portería
+        Primer Gol Mundial","osm_id":3200746261,"tourism":"attraction","historic":"memorial","memorial":"stone","osm_type":"n","wikipedia":"es:Estadio
+        Pocitos","description":"Portería del campo de fúlbol de los Pocitos, donde
+        Lucien Laurent marcó el primer gol de la historia de los mundiales de fútbol,
+        el 13 de Julio de 1930","opening_hours":"24/7"}},"place_id":"5124383f0fff134cc059d9ce0235c67341c0f00103f9011583c7be0000000092031c506f72746572c3ad61205072696d657220476f6c204d756e6469616c"},"geometry":{"type":"Point","coordinates":[-56.1562213,-34.90448629986867]}},{"type":"Feature","properties":{"name":"Centro
+        de Campo de Fútbol de los Pocitos","street":"Coronel Alegre","suburb":"Pocitos","city":"Montevideo","state":"Montevideo","postcode":"11300","country":"Uruguay","country_code":"uy","lon":-56.1562235,"lat":-34.904997,"formatted":"Centro
+        de Campo de Fútbol de los Pocitos, Coronel Alegre, 11300 Montevideo, Uruguay","address_line1":"Centro
+        de Campo de Fútbol de los Pocitos","address_line2":"Coronel Alegre, 11300
+        Montevideo, Uruguay","categories":["tourism","tourism.attraction","tourism.sights","tourism.sights.memorial"],"details":["details","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Centro
+        de Campo de Fútbol de los Pocitos","osm_id":3200746262,"tourism":"attraction","historic":"memorial","memorial":"stone","osm_type":"n","wikipedia":"es:Estadio
+        Pocitos","opening_hours":"24/7"}},"place_id":"51eeaeb321ff134cc0590db512f1d67341c0f00103f9011683c7be0000000092032943656e74726f2064652043616d706f2064652046c3ba74626f6c206465206c6f7320506f6369746f73"},"geometry":{"type":"Point","coordinates":[-56.156223499999996,-34.904996999868764]}},{"type":"Feature","properties":{"name":"Palacio
+        Legislativo","street":"Avenida de las Leyes","suburb":"Aguada","city":"Montevideo","state":"Montevideo","postcode":"11800","country":"Uruguay","country_code":"uy","lon":-56.18717049902986,"lat":-34.8912021,"formatted":"Palacio
+        Legislativo, Avenida de las Leyes, 11800 Montevideo, Uruguay","address_line1":"Palacio
+        Legislativo","address_line2":"Avenida de las Leyes, 11800 Montevideo, Uruguay","categories":["building","building.historic","building.office","building.public_and_civil","building.tourism","office","office.government","office.government.legislative","tourism","tourism.attraction","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.monument"],"details":["details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Palacio
+        Legislativo","office":"government","osm_id":81683741,"tourism":"attraction","building":"civic","historic":"monument","osm_type":"w","wikidata":"Q283417","wikipedia":"en:Legislative
+        Palace of Uruguay","government":"legislative"}},"place_id":"519739ca35f5174cc0593345cc40137241c0f00102f9011d65de040000000092031350616c6163696f204c656769736c617469766f"},"geometry":{"type":"Point","coordinates":[-56.18717071890131,-34.89121255849968]}},{"type":"Feature","properties":{"name":"Mausoleo
+        a José Gervasio Artigas","street":"Plaza Independencia","suburb":"Old City","city":"Montevideo","state":"Montevideo","postcode":"11000","country":"Uruguay","country_code":"uy","lon":-56.19979187711881,"lat":-34.90651475,"formatted":"Mausoleo
+        a José Gervasio Artigas, Plaza Independencia, 11000 Montevideo, Uruguay","address_line1":"Mausoleo
+        a José Gervasio Artigas","address_line2":"Plaza Independencia, 11000 Montevideo,
+        Uruguay","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details.facilities","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Mausoleo
+        a José Gervasio Artigas","osm_id":179739486,"historic":"memorial","osm_type":"w","wikidata":"Q4801118","wikipedia":"en:Artigas
+        Mausoleum","wheelchair":"no","memorial:type":"statue"}},"place_id":"51d253bbc792194cc059bbcdd4ac087441c0f00102f9015e9bb60a000000009203214d6175736f6c656f2061204a6f73c3a920476572766173696f2041727469676173"},"geometry":{"type":"Point","coordinates":[-56.199791876286,-34.90651474371722]}},{"type":"Feature","properties":{"name":"Fortaleza
+        General Artigas","street":"Avenida José Batlle y Ordóñez","suburb":"Cerro","city":"Montevideo","state":"Montevideo","postcode":"12800","country":"Uruguay","country_code":"uy","lon":-56.25992520391108,"lat":-34.888355,"formatted":"Fortaleza
+        General Artigas, Avenida José Batlle y Ordóñez, 12800 Montevideo, Uruguay","address_line1":"Fortaleza
+        General Artigas","address_line2":"Avenida José Batlle y Ordóñez, 12800 Montevideo,
+        Uruguay","categories":["building","building.historic","building.tourism","entertainment","entertainment.museum","tourism","tourism.sights","tourism.sights.castle"],"details":["details","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Fortaleza
+        General Artigas","osm_id":203747760,"tourism":"museum","alt_name":"Fortaleza
+        del Cerro","building":"yes","historic":"castle","osm_type":"w","wikidata":"Q5472521","wikipedia":"es:Fortaleza
+        General Artigas","castle_type":"fortress"}},"place_id":"51900e798745214cc05990a83038b87141c0f00102f901b0f1240c00000000920319466f7274616c657a612047656e6572616c2041727469676173"},"geometry":{"type":"Point","coordinates":[-56.25993436251622,-34.88843443275357]}},{"type":"Feature","properties":{"name":"Monumento
+        al Gaucho","street":"Constituyente","suburb":"Centro","city":"Montevideo","state":"Montevideo","postcode":"11114","country":"Uruguay","country_code":"uy","lon":-56.1848814,"lat":-34.9055266,"formatted":"Monumento
+        al Gaucho, Constituyente, 11114 Montevideo, Uruguay","address_line1":"Monumento
+        al Gaucho","address_line2":"Constituyente, 11114 Montevideo, Uruguay","categories":["tourism","tourism.attraction","tourism.sights","tourism.sights.memorial"],"details":["details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Monumento
+        al Gaucho","osm_id":956119415,"tourism":"attraction","historic":"memorial","memorial":"statue","osm_type":"n","wikipedia":"es:Monumento
+        al Gaucho"}},"place_id":"51c0519731aa174cc059270cae4be87341c0f00103f9017739fd38000000009203134d6f6e756d656e746f20616c2047617563686f"},"geometry":{"type":"Point","coordinates":[-56.184881399999995,-34.905526599868885]}},{"type":"Feature","properties":{"name":"Puerta
+        de la Ciudadela","street":"Juncal","suburb":"Old City","city":"Montevideo","state":"Montevideo","postcode":"11000","country":"Uruguay","country_code":"uy","lon":-56.2008133,"lat":-34.9065129,"formatted":"Puerta
+        de la Ciudadela, Juncal, 11000 Montevideo, Uruguay","address_line1":"Puerta
+        de la Ciudadela","address_line2":"Juncal, 11000 Montevideo, Uruguay","categories":["tourism","tourism.attraction","tourism.sights","tourism.sights.city_gate"],"details":["details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Puerta
+        de la Ciudadela","osm_id":1894028842,"tourism":"attraction","historic":"city_gate","osm_type":"n","wikidata":"Q5124182"}},"place_id":"51080d0e40b4194cc059802b5d9d087441c0f00103f9012a96e47000000000920316507565727461206465206c6120436975646164656c61"},"geometry":{"type":"Point","coordinates":[-56.20081329999999,-34.906512899869085]}},{"type":"Feature","properties":{"name":"Memorial
+        al Holocausto del Pueblo Judío","street":"Ciclovia de la Rambla","suburb":"Punta
+        Carretas","city":"Montevideo","state":"Montevideo","postcode":"11303","country":"Uruguay","country_code":"uy","lon":-56.1702483,"lat":-34.9251021,"formatted":"Holocaust
+        Memorial, Montevideo, Ciclovia de la Rambla, 11303 Montevideo, Uruguay","address_line1":"Holocaust
+        Memorial, Montevideo","address_line2":"Ciclovia de la Rambla, 11303 Montevideo,
+        Uruguay","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Memorial
+        al Holocausto del Pueblo Judío","osm_id":1895033152,"name:en":"Holocaust Memorial,
+        Montevideo","name:es":"Memorial al Holocausto del Pueblo Judío","historic":"memorial","osm_type":"n","wikidata":"Q12060432","wikipedia":"es:Memorial
+        del Holocausto del Pueblo Judío"}},"place_id":"518b5940b2ca154cc0593035e0be697641c0f00103f90140e9f370000000009203284d656d6f7269616c20616c20486f6c6f63617573746f2064656c20507565626c6f204a7564c3ad6f"},"geometry":{"type":"Point","coordinates":[-56.17024829999999,-34.925102099873016]}},{"type":"Feature","properties":{"name":"Ex
+        Federación de Obreros de la Industria del Vidrio","street":"Laureles","suburb":"La
+        Teja","city":"Montevideo","state":"Montevideo","postcode":"11900","country":"Uruguay","country_code":"uy","lon":-56.2330305,"lat":-34.8621472,"formatted":"Ex
+        Federación de Obreros de la Industria del Vidrio, Laureles, 11900 Montevideo,
+        Uruguay","address_line1":"Ex Federación de Obreros de la Industria del Vidrio","address_line2":"Laureles,
+        11900 Montevideo, Uruguay","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Ex
+        Federación de Obreros de la Industria del Vidrio","osm_id":3753012038,"website":"http://www.memoria.org.uy/","historic":"memorial","osm_type":"n","description":"Marca
+        de Memoria de la Intendencia de Montevideo"}},"place_id":"51393c84f1d31d4cc05929dee5d65a6e41c0f00103f901466bb2df000000009203344578204665646572616369c3b36e206465204f627265726f73206465206c6120496e647573747269612064656c2056696472696f"},"geometry":{"type":"Point","coordinates":[-56.23303049999999,-34.862147199859756]}},{"type":"Feature","properties":{"name":"Monumento
+        a Wilson Ferreira Aldunate","street":"Avenida 18 de Julio","suburb":"Centro","city":"Montevideo","state":"Montevideo","postcode":"11114","country":"Uruguay","country_code":"uy","lon":-56.1858887,"lat":-34.9059269,"formatted":"Monumento
+        a Wilson Ferreira Aldunate, Avenida 18 de Julio, 11114 Montevideo, Uruguay","address_line1":"Monumento
+        a Wilson Ferreira Aldunate","address_line2":"Avenida 18 de Julio, 11114 Montevideo,
+        Uruguay","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Monumento
+        a Wilson Ferreira Aldunate","osm_id":4775010630,"historic":"memorial","osm_type":"n","wikidata":"Q42983898","subject:wikidata":"Q3819383","subject:wikipedia":"es:Wilson
+        Ferreira Aldunate"}},"place_id":"5115996f33cb174cc0597ec0a369f57341c0f00103f90146e19c1c010000009203244d6f6e756d656e746f20612057696c736f6e20466572726569726120416c64756e617465"},"geometry":{"type":"Point","coordinates":[-56.1858887,-34.90592689986896]}},{"type":"Feature","properties":{"name":"Monumento
+        a José Pedro Varela","street":"Bulevar General Artigas","suburb":"Parque Rodó","city":"Montevideo","state":"Montevideo","postcode":"11601","country":"Uruguay","country_code":"uy","lon":-56.1633633,"lat":-34.9063605,"formatted":"Monumento
+        a José Pedro Varela, Bulevar General Artigas, 11601 Montevideo, Uruguay","address_line1":"Monumento
+        a José Pedro Varela","address_line2":"Bulevar General Artigas, 11601 Montevideo,
+        Uruguay","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":["details.artwork","details.historic","details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Monumento
+        a José Pedro Varela","osm_id":4886732043,"historic":"memorial","memorial":"statue","osm_type":"n","wikidata":"Q18416816","wikipedia":"es:Monumento
+        a José Pedro Varela","start_date":1918,"artist_name":"Miguel Blay","inscription":"Este
+        monumento erigido por suscripción popular con la contribución del Estado.
+        Decretado por Ley de 19 de junio de 1909 y el concurso de la Municipalidad
+        de Montevideo, fue inaugurado en el año 1918 siendo Presidente de la República
+        el Dr Feliciano Viera."}},"place_id":"51ed6eaf16e9144cc05972a9f09e037441c0f00103f9010b9d45230100000092031e4d6f6e756d656e746f2061204a6f73c3a920506564726f20566172656c61"},"geometry":{"type":"Point","coordinates":[-56.16336329999999,-34.90636049986905]}},{"type":"Feature","properties":{"name":"Ancla
+        de Graf Spee","street":"Rambla 25 de Agosto de 1825","suburb":"Old City","city":"Montevideo","state":"Montevideo","postcode":"11000","country":"Uruguay","country_code":"uy","lon":-56.2116353,"lat":-34.9034824,"formatted":"Ancla
+        de Graf Spee, Rambla 25 de Agosto de 1825, 11000 Montevideo, Uruguay","address_line1":"Ancla
+        de Graf Spee","address_line2":"Rambla 25 de Agosto de 1825, 11000 Montevideo,
+        Uruguay","categories":["tourism","tourism.attraction","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.ship"],"details":["details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Ancla
+        de Graf Spee","osm_id":6122332362,"tourism":"attraction","historic":"ship","osm_type":"n","wikipedia":"en:German
+        cruiser Admiral Graf Spee"}},"place_id":"51ed1692dd161b4cc0592cf9af4fa57341c0f00103f901ca60eb6c01000000920312416e636c6120646520477261662053706565"},"geometry":{"type":"Point","coordinates":[-56.21163529999999,-34.903482399868466]}},{"type":"Feature","properties":{"name":"Admiral
+        Graf Spee","country_code":"uy","lon":-56.2975073,"lat":-34.9718872,"formatted":"Admiral
+        Graf Spee, UY","address_line1":"Admiral Graf Spee","address_line2":"UY","categories":["tourism","tourism.sights"],"details":["details.wiki_and_media"],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Admiral
+        Graf Spee","osm_id":6168879129,"historic":"wreck","osm_type":"n","wikidata":"Q154115","wikipedia":"en:German
+        cruiser Admiral Graf Spee","seamark:type":"wreck"}},"place_id":"511ee91db814264cc059f772bdcc667c41c0f00103f90119a0b16f0100000092031141646d6972616c20477261662053706565"},"geometry":{"type":"Point","coordinates":[-56.29750729999999,-34.97188719988292]}},{"type":"Feature","properties":{"name":"Castillo
+        del Parque Rodó","street":"Julio Herrera y Reissig","suburb":"Parque Rodó","city":"Montevideo","state":"Montevideo","postcode":"11303","country":"Uruguay","country_code":"uy","lon":-56.16655060162492,"lat":-34.9123047,"formatted":"Castillo
+        del Parque Rodó, Julio Herrera y Reissig, 11303 Montevideo, Uruguay","address_line1":"Castillo
+        del Parque Rodó","address_line2":"Julio Herrera y Reissig, 11303 Montevideo,
+        Uruguay","categories":["tourism","tourism.sights","tourism.sights.memorial","tourism.sights.memorial.monument"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Castillo
+        del Parque Rodó","layer":1,"osm_id":37690540,"historic":"monument","osm_type":"w"}},"place_id":"51552a0c4d51154cc0596e912ee7c77441c0f00102f901ac1c3f020000000092031943617374696c6c6f2064656c2050617271756520526f64c3b3"},"geometry":{"type":"Point","coordinates":[-56.16654360860836,-34.912350557077716]}},{"type":"Feature","properties":{"name":"Molino
+        de Pérez","street":"Pasaje Arquitecto Juan Veltroni","suburb":"Malvín","city":"Montevideo","state":"Montevideo","postcode":"11403","country":"Uruguay","country_code":"uy","lon":-56.09049438037975,"lat":-34.8941679,"formatted":"Molino
+        de Pérez, Pasaje Arquitecto Juan Veltroni, 11403 Montevideo, Uruguay","address_line1":"Molino
+        de Pérez","address_line2":"Pasaje Arquitecto Juan Veltroni, 11403 Montevideo,
+        Uruguay","categories":["man_made","man_made.watermill","tourism","tourism.attraction","tourism.sights"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Molino
+        de Pérez","osm_id":151739542,"tourism":"attraction","man_made":"watermill","osm_type":"w"}},"place_id":"51b83311f0950b4cc05919e79dcf747241c0f00102f901965c0b09000000009203104d6f6c696e6f2064652050c3a972657a"},"geometry":{"type":"Point","coordinates":[-56.090513237380435,-34.89418978891462]}},{"type":"Feature","properties":{"name":"Monumento
+        a Aparicio Saravia","street":"Avenida Luis Alberto de Herrera","suburb":"Aires
+        Puros","city":"Montevideo","state":"Montevideo","postcode":"11700","country":"Uruguay","country_code":"uy","lon":-56.196237,"lat":-34.8576341,"formatted":"Monumento
+        a Aparicio Saravia, Avenida Luis Alberto de Herrera, 11700 Montevideo, Uruguay","address_line1":"Monumento
+        a Aparicio Saravia","address_line2":"Avenida Luis Alberto de Herrera, 11700
+        Montevideo, Uruguay","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Monumento
+        a Aparicio Saravia","osm_id":442866163,"historic":"memorial","osm_type":"n"}},"place_id":"51f1a1444b1e194cc059fb6945f4c66d41c0f00103f901f399651a0000000092031c4d6f6e756d656e746f206120417061726963696f2053617261766961"},"geometry":{"type":"Point","coordinates":[-56.196237,-34.85763409985881]}},{"type":"Feature","properties":{"name":"Monumento
+        a San Martín","street":"Avenida Agraciada","suburb":"Bella Vista","city":"Montevideo","state":"Montevideo","postcode":"11700","country":"Uruguay","country_code":"uy","lon":-56.1997809,"lat":-34.8755999,"formatted":"Monumento
+        a San Martín, Avenida Agraciada, 11700 Montevideo, Uruguay","address_line1":"Monumento
+        a San Martín","address_line2":"Avenida Agraciada, 11700 Montevideo, Uruguay","categories":["tourism","tourism.sights","tourism.sights.memorial"],"details":[],"datasource":{"sourcename":"openstreetmap","attribution":"©
+        OpenStreetMap contributors","license":"Open Database Licence","url":"https://www.openstreetmap.org/copyright","raw":{"name":"Monumento
+        a San Martín","osm_id":442871529,"historic":"memorial","osm_type":"n"}},"place_id":"51c7eea76b92194cc059372553a8137041c0f00103f901e9ae651a000000009203174d6f6e756d656e746f20612053616e204d617274c3ad6e"},"geometry":{"type":"Point","coordinates":[-56.1997809,-34.8755998998626]}}]}'
+  recorded_at: Mon, 14 Nov 2022 17:35:34 GMT
+recorded_with: VCR 6.1.0
