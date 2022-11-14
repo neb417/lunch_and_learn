@@ -10,6 +10,12 @@ class Api::V1::FavoritesController < ApplicationController
     render json: FavoriteSerializer.serialize_favorite, status: 201
   end
 
+  def destroy
+    favorite = Favorite.find(params[:favorite_id])
+    favorite.destroy
+    render json: FavoriteSerializer.serialize_delete_favorite, status: 204
+  end
+
   private
 
   def favorite_params

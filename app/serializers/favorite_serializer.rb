@@ -21,4 +21,12 @@ class FavoriteSerializer
               end
     }
   end
+
+  def self.serialize_delete_favorite
+    {
+      "data": {
+        "success": 'Favorite successfully removed'
+      }
+    }
+  end
 end

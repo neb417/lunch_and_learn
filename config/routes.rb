@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :learning_resources, only: :index
       resources :users, only: :create
       resources :favorites, only: %i[index create]
+      delete '/favorite', to: 'favorites#destroy'
       resources :tourist_sights, only: :index
     end
   end
