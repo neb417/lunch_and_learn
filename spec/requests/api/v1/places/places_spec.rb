@@ -16,20 +16,19 @@ RSpec.describe 'Places Tourist Sites Request' do
     it 'returns correct attributes' do
       places = JSON.parse(response.body, symbolize_names: true)
       expect(places).to have_key(:data)
-      place = places.first
-      
-      expect(place[:data]).to have_key(:type)
-      expect(place[:data][:type]).to eq('tourist_site')
-      expect(place[:data]).to have_key(:id)
-      expect(place[:data][:id]).to eq(nil)
-      expect(place[:data]).to have_key(:attributes)
-      expect(place[:data][:attributes]).to be_a Hash
-      expect(place[:data][:attributes]).to have_key(:name)
-      expect(place[:data][:attributes]).to have_key(:address)
-      expect(place[:data][:attributes]).to have_key(:place_id)
-      expect(place[:data][:attributes][:name]).to be_a String
-      expect(place[:data][:attributes][:address]).to be_a String
-      expect(place[:data][:attributes][:place_id]).to be_a String
+      place = places[:data].first
+      expect(place).to have_key(:type)
+      expect(place[:type]).to eq('tourist_site')
+      expect(place).to have_key(:id)
+      expect(place[:id]).to eq(nil)
+      expect(place).to have_key(:attributes)
+      expect(place[:attributes]).to be_a Hash
+      expect(place[:attributes]).to have_key(:name)
+      expect(place[:attributes]).to have_key(:address)
+      expect(place[:attributes]).to have_key(:place_id)
+      expect(place[:attributes][:name]).to be_a String
+      expect(place[:attributes][:address]).to be_a String
+      expect(place[:attributes][:place_id]).to be_a String
     end
   end
 end
