@@ -45,4 +45,18 @@ RSpec.describe 'Favorites Post Request' do
       expect(recipes.count).to be < all_favs.count
     end
   end
+
+  describe 'returns error when api is not found' do
+    it 'returns error message' do
+      get api_v1_favorites_path, params: {
+        api_key: '123445iaug'
+      }
+
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(error).to eq({ error: 'Invalid credentials' })
+    end
+  end
 end
