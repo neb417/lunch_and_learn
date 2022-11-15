@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   before_action :new_user
+  # before_create :new_user
 
   def create
     return create_user if @user.save
@@ -10,10 +11,11 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:name, :email, :api_key)
+    params.permit(:name, :email, :api_key, :password, :password_confirmation)
   end
 
   def new_user
+    # binding.pry
     @user = User.new(user_params)
   end
 
