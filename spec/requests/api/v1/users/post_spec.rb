@@ -3,7 +3,13 @@ require 'rails_helper'
 RSpec.describe 'Users Post Request' do
   describe 'uses passed user info to return a user' do
     before :each do
-      post api_v1_users_path, params: { name: 'Athena Dao', email: 'athenadao@bestgirlever.com' }
+      post api_v1_users_path, params:
+        {
+          name: 'Athena Dao',
+          email: 'athenadao@bestgirlever.com',
+          password: 'password',
+          password_confirmation: 'password'
+        }
     end
 
     it 'uses request body to create user' do
@@ -32,15 +38,67 @@ RSpec.describe 'Users Post Request' do
       expect(user[:data][:attributes][:api_key]).to be_a String
     end
   end
+
   describe 'user not created' do
     it 'returns error when email already exists' do
-      User.create!(name: 'Athena Dao', email: 'athenadao@bestgirlever.com')
-      post api_v1_users_path, params: { name: 'Athena Dao', email: 'athenadao@bestgirlever.com' }
+      User.create!(name: 'Athena Dao', email: 'athenadao@bestgirlever.com', password: 'password', password_confirmation: 'password')
+      post api_v1_users_path, params: { name: 'Athena Dao', email: 'athenadao@bestgirlever.com', password: 'password', password_confirmation: 'password' }
       error = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
       expect(error[:data]).to eq('Email has already been taken')
+    end
+
+    it 'returns error when password/password_confirmation do not match' do
+      post api_v1_users_path, params: { name: 'Athena Dao', email: 'athenadao@bestgirlever.com', password: 'password', password_confirmation: 'passw0rd' }
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(error[:data]).to eq("Password confirmation doesn't match Password")
+    end
+
+    it 'returns error when name missing' do
+      post api_v1_users_path, params: {
+        email: 'athenadao@bestgirlever.com',
+        password: 'password',
+        password_confirmation: 'password'
+      }
+
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(error[:data]).to eq("Name can't be blank")
+    end
+
+    it 'returns error when email missing' do
+      post api_v1_users_path, params: {
+        name: 'Athena Dao',
+        password: 'password',
+        password_confirmation: 'password'
+      }
+
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(error[:data]).to eq("Email can't be blank")
+    end
+
+    it 'returns error when password missing' do
+      post api_v1_users_path, params: {
+        name: 'Athena Dao',
+        email: 'athenadao@bestgirlever.com',
+        password_confirmation: 'password'
+      }
+
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(error[:data]).to eq("Password can't be blank")
     end
   end
 end
