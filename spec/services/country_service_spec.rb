@@ -12,5 +12,15 @@ RSpec.describe CountryService do
       expect(country[:name]).to have_key(:common)
       expect(country[:name][:common]).to be_a String
     end
+
+    it 'cache is caching' do
+      cache = Rails.cache.read('countries_api_cache')
+      expect(cache).to be_an Array
+      expect(cache.empty?).to be false
+      expect(cache.first).to have_key(:name)
+      expect(cache.first[:name]).to have_key(:common)
+      expect(cache.first[:name][:common]).to be_a String
+      expect(cache.first[:name][:common].empty?).to be false
+    end
   end
 end

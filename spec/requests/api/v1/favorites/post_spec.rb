@@ -18,7 +18,10 @@ RSpec.describe 'Favorites Post Request' do
       expect(response).to be_successful
       expect(response.status).to eq(201)
       expect(response.body).to be_a String
-      expect(response.body).to eq("{\"success\":\"Favorite added successfully\"}")
+
+      error = JSON.parse(response.body, symbolize_names: true)
+
+      expect(error).to eq({ "success": 'Favorite added successfully' })
     end
   end
 

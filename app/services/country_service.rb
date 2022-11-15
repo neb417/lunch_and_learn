@@ -1,7 +1,9 @@
 class CountryService
   def self.call_for_countries
-    response = conn.get('/v3.1/all')
-    parse(response)
+    Rails.cache.fetch('countries_api_cache', expires_in: 7.days) do
+      response = conn.get('/v3.1/all')
+      parse(response)
+    end
   end
 
   def self.call_for_country_info(country)
