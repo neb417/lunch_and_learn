@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :favorites, only: %i[index create]
       delete '/favorite', to: 'favorites#destroy'
       resources :tourist_sights, only: :index
+      resources :sessions, only: :create
     end
   end
 

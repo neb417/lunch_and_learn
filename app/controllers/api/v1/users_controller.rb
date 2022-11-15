@@ -1,6 +1,5 @@
 class Api::V1::UsersController < ApplicationController
   before_action :new_user
-  # before_create :new_user
 
   def create
     return create_user if @user.save
@@ -15,7 +14,6 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def new_user
-    # binding.pry
     @user = User.new(user_params)
   end
 
