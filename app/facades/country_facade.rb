@@ -11,7 +11,8 @@ class CountryFacade
   end
 
   def self.return_country(query_search)
-    country_info = CountryService.call_for_country_info(query_search)
+    country = query_search.split(' ').first
+    country_info = CountryService.call_for_country_info(country)
     return country_info if country_info.include?(:status)
 
     country_info.first[:name][:common]
