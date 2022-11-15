@@ -92,7 +92,7 @@ This README makes the assumption that rails is currently active on local machine
    gem 'jsonapi-serializer'
    gem 'sidekiq'
    ```
-   In 'group :development, :test do
+   In group :development, :test do
 
    ```sh
    gem 'capybara'
