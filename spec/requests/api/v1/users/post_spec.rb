@@ -38,6 +38,7 @@ RSpec.describe 'Users Post Request' do
       expect(user[:data][:attributes][:api_key]).to be_a String
     end
   end
+
   describe 'user not created' do
     it 'returns error when email already exists' do
       User.create!(name: 'Athena Dao', email: 'athenadao@bestgirlever.com', password: 'password', password_confirmation: 'password')
@@ -64,12 +65,7 @@ RSpec.describe 'Users Post Request' do
         password: 'password',
         password_confirmation: 'password'
       }
-      # post api_v1_users_path, params: {
-      #   name: 'Athena Dao',
-      #   email: 'athenadao@bestgirlever.com',
-      #   password: 'password',
-      #   password_confirmation: 'password'
-      # }
+
       error = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to_not be_successful
@@ -83,12 +79,7 @@ RSpec.describe 'Users Post Request' do
         password: 'password',
         password_confirmation: 'password'
       }
-      # post api_v1_users_path, params: {
-      #   name: 'Athena Dao',
-      #   email: 'athenadao@bestgirlever.com',
-      #   password: 'password',
-      #   password_confirmation: 'password'
-      # }
+
       error = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to_not be_successful
