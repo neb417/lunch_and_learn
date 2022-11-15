@@ -15,6 +15,6 @@ class Api::V1::TouristSightsController < ApplicationController
   end
 
   def country_error(country, latlng)
-    render json: PlaceSerializer.error_serializer(country, latlng), status: 400
+    render json: ErrorSerializer.error_serializer(latlng, country), status: 400
   end
 end

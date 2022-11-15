@@ -46,4 +46,33 @@ RSpec.describe 'Learning Resources end point' do
       expect(media[:data][:attributes][:images].first.count).to eq(2)
     end
   end
+  describe 'extension work' do
+    it 'returns 4xx when passed country is invalid', :vcr do
+      country = { country: 'france' }
+      get api_v1_learning_resources_path(country)
+      expect(response.status).to eq(200)
+
+      country2 = { country: 'etwouic' }
+      get api_v1_learning_resources_path(country2)
+      expect(response.status).to eq(400)
+      error = JSON.parse(response.body, symbolize_names: true)
+      expect(error[:data][:message]).to eq("Country input 'etwouic' not found")
+    end
+  end
+
+  describe 'multi-word country' do
+    it 'returns country media when name is multi-worded', :vcr do
+      country = { country: 'Antigua and Barbuda' }
+      get api_v1_learning_resources_path(country)
+
+      media = JSON.parse(response.body, symbolize_names: true)
+      expect(response).to be_successful
+      expect(response.status).to eq(200)
+      expect(media[:data].count).to eq(3)
+      expect(media[:data][:attributes].count).to eq(3)
+      expect(media[:data][:attributes][:video].count).to eq(2)
+      expect(media[:data][:attributes][:images].count).to eq(10)
+      expect(media[:data][:attributes][:images].first.count).to eq(2)
+    end
+  end
 end

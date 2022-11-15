@@ -51,15 +51,19 @@ RSpec.describe 'recipe end point' do
       expect(recipes).to have_key(:data)
       expect(recipes[:data]).to be_an Array
     end
+  end
 
-    it 'returns empty array when no recipes are returned' do
-      country = { country: 'etwouic' }
+  describe 'extension work' do
+    it 'returns 4xx when passed country is invalid', :vcr do
+      country = { country: 'france' }
       get api_v1_recipes_path(country)
-      recipes = JSON.parse(response.body, symbolize_names: true)
+      expect(response.status).to eq(200)
 
-      expect(recipes).to have_key(:data)
-      expect(recipes[:data]).to be_an Array
-      expect(recipes[:data].empty?).to be true
+      country2 = { country: 'etwouic' }
+      get api_v1_recipes_path(country2)
+      expect(response.status).to eq(400)
+      error = JSON.parse(response.body, symbolize_names: true)
+      expect(error[:data][:message]).to eq("Country input 'etwouic' not found")
     end
   end
 end

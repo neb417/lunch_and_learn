@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2022 17:54:48 GMT
+      - Mon, 14 Nov 2022 23:02:29 GMT
       Server:
       - Apache/2.4.38 (Debian)
       Cache-Control:
@@ -33,7 +33,7 @@ http_interactions:
       string: '[{"name":{"common":"Romania","official":"Romania","nativeName":{"ron":{"official":"România","common":"România"}}},"tld":[".ro"],"cca2":"RO","ccn3":"642","cca3":"ROU","cioc":"ROU","independent":true,"status":"officially-assigned","unMember":true,"currencies":{"RON":{"name":"Romanian
         leu","symbol":"lei"}},"idd":{"root":"+4","suffixes":["0"]},"capital":["Bucharest"],"altSpellings":["RO","Rumania","Roumania","România"],"region":"Europe","subregion":"Southeast
         Europe","languages":{"ron":"Romanian"},"translations":{"ara":{"official":"رومانيا","common":"رومانيا"},"bre":{"official":"Roumania","common":"Roumania"},"ces":{"official":"Rumunsko","common":"Rumunsko"},"cym":{"official":"Romania","common":"Romania"},"deu":{"official":"Rumänien","common":"Rumänien"},"est":{"official":"Rumeenia","common":"Rumeenia"},"fin":{"official":"Romania","common":"Romania"},"fra":{"official":"Roumanie","common":"Roumanie"},"hrv":{"official":"Rumunija","common":"Rumunjska"},"hun":{"official":"Románia","common":"Románia"},"ita":{"official":"Romania","common":"Romania"},"jpn":{"official":"ルーマニア","common":"ルーマニア"},"kor":{"official":"루마니아","common":"루마니아"},"nld":{"official":"Roemenië","common":"Roemenië"},"per":{"official":"رومانی","common":"رومانی"},"pol":{"official":"Rumunia","common":"Rumunia"},"por":{"official":"Romênia","common":"Roménia"},"rus":{"official":"Румыния","common":"Румыния"},"slk":{"official":"Rumunsko","common":"Rumunsko"},"spa":{"official":"Rumania","common":"Rumania"},"swe":{"official":"Rumänien","common":"Rumänien"},"tur":{"official":"Romanya","common":"Romanya"},"urd":{"official":"رومانیہ","common":"رومانیہ"},"zho":{"official":"罗马尼亚","common":"罗马尼亚"}},"latlng":[46.0,25.0],"landlocked":false,"borders":["BGR","HUN","MDA","SRB","UKR"],"area":238391.0,"demonyms":{"eng":{"f":"Romanian","m":"Romanian"},"fra":{"f":"Roumaine","m":"Roumain"}},"flag":"\uD83C\uDDF7\uD83C\uDDF4","maps":{"googleMaps":"https://goo.gl/maps/845hAgCf1mDkN3vr7","openStreetMaps":"https://www.openstreetmap.org/relation/90689"},"population":19286123,"gini":{"2018":35.8},"fifa":"ROU","car":{"signs":["RO"],"side":"right"},"timezones":["UTC+02:00"],"continents":["Europe"],"flags":{"png":"https://flagcdn.com/w320/ro.png","svg":"https://flagcdn.com/ro.svg"},"coatOfArms":{"png":"https://mainfacts.com/media/images/coats_of_arms/ro.png","svg":"https://mainfacts.com/media/images/coats_of_arms/ro.svg"},"startOfWeek":"monday","capitalInfo":{"latlng":[44.43,26.1]},"postalCode":{"format":"######","regex":"^(\\d{6})$"}}]'
-  recorded_at: Mon, 14 Nov 2022 17:54:48 GMT
+  recorded_at: Mon, 14 Nov 2022 23:02:29 GMT
 - request:
     method: get
     uri: https://api.geoapify.com/v2/places?apiKey=<geo_api_key>&categories=tourism.sights&filter=circle:26.1,44.43,20000
@@ -53,7 +53,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Nov 2022 17:54:49 GMT
+      - Mon, 14 Nov 2022 23:02:31 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -83,13 +83,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rt2cH9DfhWEVi4RmpLs0wyYl7RMrpxr5yaVVf3vOfyIVTY3Kk%2Bwc%2FQzNMKCkn%2FSlAkgzfk4EypAxpNpgx6czgjJgtQjC9CvK1d8ljLgnx%2FamasP%2FLj%2B%2FscrtgPmLPXGSP5pQLhiVRzNaa9TuVCg%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=hUPSvvJBjmhQkbqV5JUcw%2FksHRXeyF6Fe6eUcliPVbYw6Sx50AnpSes0IwVvMzrg11OgBTInihdGAa%2B3szPumS%2FVMJ4Bpvd70ftY25yc%2BWGjin%2BpD4IXvB8FaVQa2oRViT0YsMJtQP3wRgn3YHk%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 76a19d4d2abe873b-ORD
+      - 76a36001dc012a72-ORD
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -290,5 +290,5 @@ http_interactions:
         de Triumf","image":"https://d1cuyjsrcm0gby.cloudfront.net/RXq7Y3DQYrpX69Z0grvP5g/thumb-2048.jpg","is_in":"București","osm_id":217851530,"name:de":"Triumphbogen","name:en":"Triumphal
         Arch","name:fr":"Arc de triomphe","name:it":"Arco di Trionfo","tourism":"attraction","building":"yes","historic":"monument","osm_type":"w","wikidata":"Q638278","addr:city":"București","mapillary":"https://www.mapillary.com/map/im/RXq7Y3DQYrpX69Z0grvP5g","wikipedia":"ro:Arcul
         de Triumf din București","addr:country":"RO"}},"place_id":"51fcccfee5ff133a40592eaed73acc3b4640f00102f9018a26fc0c0000000092030f417263756c20646520547269756d66"},"geometry":{"type":"Point","coordinates":[26.078123450000007,44.4671701005103]}}]}'
-  recorded_at: Mon, 14 Nov 2022 17:54:49 GMT
+  recorded_at: Mon, 14 Nov 2022 23:02:31 GMT
 recorded_with: VCR 6.1.0

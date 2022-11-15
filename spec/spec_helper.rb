@@ -15,7 +15,7 @@
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
 SimpleCov.start 'rails'
-SimpleCov.add_filter ['config','channels', 'jobs', 'mailers', 'facades']
+SimpleCov.add_filter ['config','channels', 'jobs', 'mailers', 'sidekiq']
 require 'webmock/rspec'
 require 'vcr'
 RSpec.configure do |config|
@@ -96,4 +96,11 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  config.before(:example, disable_cache: true) do
+    allow(Rails).to receive(:cache).and_return(ActiveSupport::Cache::NullStore.new)
+  end
+
+  config.after(:example, disable_cache: true) do
+    allow(Rails).to receive(:cache).and_call_original
+  end
 end
