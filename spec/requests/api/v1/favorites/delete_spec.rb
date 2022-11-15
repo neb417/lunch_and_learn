@@ -12,7 +12,7 @@ RSpec.describe 'Favorites Post Request' do
 
   describe 'delete a user favorite' do
     it 'returns successful response' do
-      expect(user1.favorites.count). to eq 2
+      expect(user1.favorites.count).to eq 2
 
       delete api_v1_favorite_path, params: {
         api_key: user1.api_key,
