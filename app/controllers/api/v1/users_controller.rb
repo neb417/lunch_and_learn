@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   before_action :new_user
+
   def create
     return create_user if @user.save
 

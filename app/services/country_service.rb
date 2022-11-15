@@ -1,5 +1,6 @@
 class CountryService
   def self.call_for_countries
+    # CountryCallJob.perform_in(7.days)
     Rails.cache.fetch('countries_api_cache', expires_in: 7.days) do
       response = conn.get('/v3.1/all')
       parse(response)

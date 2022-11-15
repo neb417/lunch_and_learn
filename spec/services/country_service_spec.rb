@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe CountryService do
   describe 'call_for_countries' do
-    it 'returns correct attrubutes', :vcr do
+    it 'returns correct attrubutes', disable_cache: true do
       countries = CountryService.call_for_countries
 
       expect(countries).to be_an Array
@@ -15,6 +15,7 @@ RSpec.describe CountryService do
 
     it 'cache is caching' do
       cache = Rails.cache.read('countries_api_cache')
+      # binding.pry
       expect(cache).to be_an Array
       expect(cache.empty?).to be false
       expect(cache.first).to have_key(:name)

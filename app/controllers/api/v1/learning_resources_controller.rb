@@ -5,6 +5,7 @@ class Api::V1::LearningResourcesController < ApplicationController
 
     video = VideoFacade.return_video(@country)
     images = ImageFacade.return_images(@country)
+    # images = MediaSenderJob.perform_async(@country)
     render json: LearningResourceSerializer.serialize_media(@country, video, images)
   end
 
